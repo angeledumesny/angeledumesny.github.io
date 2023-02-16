@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "hibana";
+    src: local("Hibana-45SubMedium"),
+      url("font/Hibana-45SubMedium.woff2") format("opentype");
+  }
+
+  @font-face {
+    font-family: "spectral";
+    src: local("Spectral-MediumItalic"),
+      url("font/Spectral-MediumItalic.ttf") format("opentype");
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    font-family: sans-serif;
+    font-weight: 400; /*anti_faux-gras*/
+}
+
+img{
+    width: 100%;
+    display:block;
+    height:auto;
+}
+
+header{
+    display: grid;
+    position: sticky;
+    top: 10px;
+    grid-template-columns: 1fr auto auto auto;
+    gap: 10px;
+    align-items: baseline;  
+}
+
+body{
+    font-family: 'hibana', sans-serif;
+}
+
+.txtcourant{
+    font-size: 20px;
+}
+
+.annotation{
+    font-size: 12px;
+}
+
+a {
+    font-family: 'spectral', serif;
+    font-style: 'spectral', italic;
+    color: currentColor;
+}
+
+a.sommaire {
+    font-weight: 400; 
+    text-decoration: none;
+}
+
+a .body {
+    font-weight: 400;
+    color:black;
+    text-decoration: underline;
+}
+/*
+@media (max-width:550) {
+    .project{
+        margin: auto;
+        max-width: 300px;
+        justify-content: center;
+        gap: 10px;
+    }
+}*/
+  
+@media (min-width:200px) {
+    .grid{
+        display:grid;
+        max-width:1200px;
+        margin: auto;
+        grid-template-columns: repeat(auto-fit,200px);
+        justify-content:center;
+        gap:10px;
+    }
+}
+
+
+/*text-decoration: none;
+    color: currentColor;
+    
+body{
+  font-family: sans-serif;
+  margin: 0;
+}
+a{
+  color:currentcolor;
+}
+.header{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  align-items:center;
+  background:#fff;
+  padding:24px;
+  position:sticky;
+  top:0;
+  border-bottom: 1px solid #eee;
+  
+}
+
+.header-title{
+  font-size: 16px;
+}
+.grid{
+  padding:24px;
+  display:grid;
+  max-width:1200px;
+  margin:auto;
+  grid-template-columns: repeat(auto-fit,200px);
+  justify-content:center;
+  gap:24px;
+}
+
+.grid a{
+  text-decoration: none;
+}
+
+.grid a:hover{
+  opacity:0.8;
+}
+    
+    
+    */
