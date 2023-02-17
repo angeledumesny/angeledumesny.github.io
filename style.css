@@ -42,6 +42,11 @@ body{
     font-size: 12px;
 }
 
+.nom{
+  font-family: 'hibana', sans-serif;
+  text-decoration: none;
+}
+
 a {
     font-family: 'spectral', serif;
     font-style: 'spectral', italic;
@@ -58,70 +63,67 @@ a .body {
     color:black;
     text-decoration: underline;
 }
-/*
-@media (max-width:550) {
-    .project{
-        margin: auto;
-        max-width: 300px;
-        justify-content: center;
-        gap: 10px;
-    }
-}*/
-  
-@media (min-width:200px) {
+
+@media (min-width:400px) {
     .grid{
         display:grid;
-        max-width:1200px;
+        max-width:1600px;
         margin: auto;
         grid-template-columns: repeat(auto-fit,200px);
         justify-content:center;
         gap:10px;
     }
 }
-
-
-/*text-decoration: none;
-    color: currentColor;
-    
-body{
-  font-family: sans-serif;
-  margin: 0;
-}
-a{
-  color:currentcolor;
-}
-.header{
-  display:grid;
-  grid-template-columns: 1fr auto;
-  align-items:center;
-  background:#fff;
-  padding:24px;
-  position:sticky;
-  top:0;
-  border-bottom: 1px solid #eee;
-  
-}
-
-.header-title{
-  font-size: 16px;
-}
-.grid{
-  padding:24px;
-  display:grid;
-  max-width:1200px;
-  margin:auto;
+/*
+.item-grid{
+  display: grid;
   grid-template-columns: repeat(auto-fit,200px);
-  justify-content:center;
-  gap:24px;
+}
+.item {
+  opacity: 100;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  transition: 0.5s;
 }
 
-.grid a{
+.item-grid:hover .dessus{
+  opacity:0;
+}*/
+
+@media (min-width:600px) {
+  .projectpage{
+    display: grid;
+   /* max-width:1000px;*/
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 99vh;
+  }
+}
+
+.sticky{
+  position: sticky;
+  position: top;
+  top: 100px;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 10px;
+  text-align: left;
+}
+
+.td{
+  font-size: 15px;
+  font-family: 'hibana', sans-serif;
   text-decoration: none;
 }
-
-.grid a:hover{
-  opacity:0.8;
+  
+.tableau:hover{
+  opacity: 0;
 }
-    
-    
-    */
