@@ -28,7 +28,7 @@ img{
   top: 0px;
   grid-template-columns: 1fr auto auto auto;
   gap: 10px;
-  align-items: baseline;
+  align-items: baseline;  
 }
 
 .headerbis{
@@ -152,8 +152,8 @@ a .body {
   }
 }
 
-.projectpage div:first-child {
-  text-align: center;
+.projectpage .img {
+  margin-bottom: 10px;
 }
 
 .sticky{
