@@ -21,13 +21,25 @@ img{
     height:auto;
 }
 
-header{
-    display: grid;
-    position: sticky;
-    top: 10px;
-    grid-template-columns: 1fr auto auto auto;
-    gap: 10px;
-    align-items: baseline;  
+.header{
+  z-index: 1;
+  display: grid;
+  position: sticky;
+  top: 0px;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 10px;
+  align-items: baseline;  
+}
+
+.headerbis{
+  z-index: 1;
+  display: grid;
+  position: sticky;
+  top : 0px;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 10px;
+  align-items: baseline;
+  background-color: white;
 }
 
 body{
@@ -67,10 +79,10 @@ a .body {
 @media (min-width:400px) {
     .grid{
         display:grid;
+        justify-content:center;
         max-width:1600px;
         margin: auto;
         grid-template-columns: repeat(auto-fit,200px);
-        justify-content:center;
         gap:10px;
     }
 }
@@ -140,4 +152,12 @@ th {
   
 .tableau:hover{
   opacity: 0;
+}
+
+.titre:hover{
+  font-weight: bold;
+}
+
+a.td {
+  width: 100%;
 }
