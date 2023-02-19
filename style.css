@@ -74,21 +74,31 @@ a .body {
         gap:10px;
     }
 }
-/*
+
 .item-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit,200px);
+
+  overflow: hidden;
 }
+
 .item {
   opacity: 100;
   grid-column: 1/-1;
   grid-row: 1/-1;
+  transform: scale(1.1);
   transition: 0.5s;
+  width: 200px;
 }
 
 .item-grid:hover .dessus{
   opacity:0;
-}*/
+  transform: scale(1);
+}
+
+.item-grid:hover .dessous{
+  transform: scale(1);
+}
 
 @media (min-width:600px) {
   .projectpage{
@@ -97,6 +107,10 @@ a .body {
     grid-template-columns: repeat(2, 1fr);
     min-height: 99vh;
   }
+}
+
+.projectpage div:first-child {
+  text-align: center;
 }
 
 .sticky{
