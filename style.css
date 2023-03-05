@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: "hibana";
     src: local("Hibana-45SubMedium"),
       url("font/Hibana-45SubMedium.woff2") format("opentype");
@@ -8,6 +8,50 @@
     font-family: "spectral";
     src: local("Spectral-MediumItalic"),
       url("font/Spectral-MediumItalic.ttf") format("opentype");
+  }
+
+  cursor {
+    cursor: url('source/autre/fleche.png'), auto;
+  }*/
+
+  @font-face {
+    font-family: "monument grotesk";
+    src: local("MonumentGrotesk"), 
+    url(font/MonumentGrotesk-Regular.woff2) format("opentype");
+  }
+
+  @font-face {
+    font-family: "monument grotesk bold";
+    src: local("MonumentGrotesk-Bold"), 
+    url(font/MonumentGrotesk-Bold.woff2) format("opentype");
+  }
+
+  @font-face {
+    font-family: "monument grotesk italic";
+    src: local("MonumentGrotesk-BoldItalic"), 
+    url(font/MonumentGrotesk-BoldItalic.woff2) format("opentype");
+  }
+
+  .guide {
+    font-family: 'monument grotesk bold', sans-serif;
+    font-size: 8px;
+    line-height: 0px;
+  }
+
+  .txt {
+    font-family: 'monument grotesk bold', sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .txt .sticky {
+    position: fixed;
+  }
+
+  .txt .sticky .suivant{
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
   }
 
   h1,h2,h3,h4,h5,h6{
@@ -28,6 +72,7 @@ img{
   top: 0px;
   grid-template-columns: 1fr auto auto auto;
   gap: 10px;
+  margin-top: 10px;
   align-items: baseline;  
 }
 
@@ -42,35 +87,31 @@ img{
   background-color: white;
 }
 
-body{
-    font-family: 'hibana', sans-serif;
-}
-
-.txtcourant{
-    font-size: 20px;
-}
-
-.annotation{
-    font-size: 12px;
+a {
+  font-family: 'monument grotesk bold', sans-serif;
+  text-decoration: none;
+  color: black;
 }
 
 .nom{
-  font-family: 'hibana', sans-serif;
+  font-family: 'monument grotesk bold', sans-serif;
+  font-size: 12px;
   text-decoration: none;
 }
 
-a {
+a.sommaire {
+  font-family: 'monument grotesk bold', sans-serif;
+  font-size: 12px;
+}
+
+/*a {
     font-family: 'spectral', serif;
     font-style: 'spectral', italic;
     color: currentColor;
-}
-
-a.sommaire {
-    font-weight: 400; 
-    text-decoration: none;
-}
+}*/
 
 a .body {
+    font-family: 'monument grotesk italic';
     font-weight: 400;
     color:black;
     text-decoration: underline;
@@ -159,7 +200,6 @@ a .body {
 .sticky{
   position: sticky;
   position: top;
-  top: 100px;
   z-index: 1;
   margin-left: 5px;
   margin-right: 10px;
