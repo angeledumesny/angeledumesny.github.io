@@ -12,7 +12,6 @@
 
   cursor {
     cursor: url('source/autre/fleche.png'), auto;
-  }*/
 
   @font-face {
     font-family: "monument grotesk";
@@ -20,43 +19,57 @@
     url(font/MonumentGrotesk-Regular.woff2) format("opentype");
   }
 
-  @font-face {
-    font-family: "monument grotesk bold";
-    src: local("MonumentGrotesk-Bold"), 
-    url(font/MonumentGrotesk-Bold.woff2) format("opentype");
+  Area Normal:
+
+  EXTRABOLD
+  font-family: area-normal, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+
+  font-family: area-normal, sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  BLACK
+  font-family: area-normal, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+
+  font-family: area-normal, sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  
+  */
+
+.guide {
+  font-family: area-normal, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 8px;
+  line-height: 0px;
   }
 
-  @font-face {
-    font-family: "monument grotesk italic";
-    src: local("MonumentGrotesk-BoldItalic"), 
-    url(font/MonumentGrotesk-BoldItalic.woff2) format("opentype");
-  }
+.txt {
+  font-family: area-normal, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 12px;
+}
 
-  .guide {
-    font-family: 'monument grotesk bold', sans-serif;
-    font-size: 8px;
-    line-height: 0px;
-  }
+.txt .sticky {
+  position: fixed;
+}
 
-  .txt {
-    font-family: 'monument grotesk bold', sans-serif;
-    font-size: 10px;
-    line-height: 12px;
-  }
+.txt .sticky .suivant{
+  position: fixed;
+  text-decoration: none;
+  bottom: 15px;
+  right: 10px;
+}
 
-  .txt .sticky {
-    position: fixed;
-  }
-
-  .txt .sticky .suivant{
-    position: fixed;
-    bottom: 15px;
-    right: 10px;
-  }
-
-  h1,h2,h3,h4,h5,h6{
-    font-family: sans-serif;
-    font-weight: 400; /*anti_faux-gras*/
+h1,h2,h3,h4,h5,h6{
+  font-family: sans-serif;
+  font-weight: 400; /*anti_faux-gras*/
 }
 
 img{
@@ -88,20 +101,26 @@ img{
 }
 
 a {
-  font-family: 'monument grotesk bold', sans-serif;
-  text-decoration: none;
+  font-family: "area-normal", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: black;
 }
 
 .nom{
-  font-family: 'monument grotesk bold', sans-serif;
+  font-family: area-normal, sans-serif;
+  font-weight: 800;
+  font-style: normal;
   font-size: 12px;
   text-decoration: none;
 }
 
 a.sommaire {
-  font-family: 'monument grotesk bold', sans-serif;
-  font-size: 12px;
+  font-family: "area-normal", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 10px;
 }
 
 /*a {
@@ -110,12 +129,14 @@ a.sommaire {
     color: currentColor;
 }*/
 
-a .body {
-    font-family: 'monument grotesk italic';
-    font-weight: 400;
-    color:black;
-    text-decoration: underline;
+a .txt {
+  font-family: area-normal, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color:black;
+  text-decoration: underline;
 }
+
 
 @media (min-width:2000px) {
   .grid{
@@ -211,13 +232,18 @@ table{
 }
 
 th {
-  font-size: 10px;
+  font-family: area-normal, sans-serif;
+  font-weight: 800;
+  font-size: 8px;
+  font-style: normal;
   text-align: left;
 }
 
 .td{
-  font-size: 15px;
-  font-family: 'hibana', sans-serif;
+  font-family: area-normal, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 10px;
   text-decoration: none;
 }
   
