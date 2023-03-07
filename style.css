@@ -46,6 +46,7 @@
   font-style: normal;
   font-size: 8px;
   line-height: 0px;
+  margin-top: 22px;
   }
 
 .txt {
@@ -53,11 +54,13 @@
   font-weight: 800;
   font-style: normal;
   font-size: 10px;
-  line-height: 12px;
+  line-height: auto;
 }
 
-.txt .sticky {
-  position: fixed;
+@media (min-width: 600px) {
+  .txt .sticky{
+    position: fixed;
+  }
 }
 
 .txt .sticky .suivant{
@@ -122,12 +125,6 @@ a.sommaire {
   text-decoration: none;
   font-size: 10px;
 }
-
-/*a {
-    font-family: 'spectral', serif;
-    font-style: 'spectral', italic;
-    color: currentColor;
-}*/
 
 a .txt {
   font-family: area-normal, sans-serif;
