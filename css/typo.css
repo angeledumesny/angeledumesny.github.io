@@ -1,0 +1,13 @@
+/* Typo  and fonts General */
+
+h1,h2,h3,h4,h5,h6{
+  font-family: sans-serif;
+  font-weight: 400; /*anti_faux-gras*/
+}
+
+a {
+  font-family: "area-normal", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
