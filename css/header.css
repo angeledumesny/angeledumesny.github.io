@@ -14,6 +14,12 @@
   font-size: 12px;
   text-decoration: none;
   color: black;
+  font-family: "area-normal", sans-serif;
+  font-weight: 800;
+  font-style: bold;
+  font-size: 12px;
+  text-decoration: none;
+  mix-blend-mode: color;
 }
 
 .header a:hover{
@@ -21,21 +27,6 @@
   transition: 0.3s;
 }
 
-/* Typo and Fonts */
-
-.nom{
-  font-family: area-normal, sans-serif;
-  font-weight: 800;
-  font-style: normal;
-  font-size: 12px;
-  text-decoration: none;
+.links {
+  margin: 0 0 0 5px;
 }
-
-a.sommaire {
-  font-family: "area-normal", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-  text-decoration: none;
-  font-size: 10px;
-}
-

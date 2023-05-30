@@ -15,6 +15,51 @@
     min-height: 99vh;
   }
 }
+
+@media (max-height: 300px) {
+  .article{
+    height: 75vh !important;
+  }
+  .article {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .article::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  .article::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .article::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+@media (max-height: 500px) {
+  .article{
+    height: 75vh !important;
+  }
+  .article {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .article::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  .article::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .article::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
 /* Position */
 
 .article{
