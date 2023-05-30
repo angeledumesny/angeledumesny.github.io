@@ -17,9 +17,9 @@
 }
 
 @media (max-height: 300px) {
-  .article{
+  /* .article{
     height: 75vh !important;
-  }
+  } */
   .article {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
@@ -39,9 +39,10 @@
 }
 
 @media (max-height: 500px) {
-  .article{
+  /* .article{
     height: 75vh !important;
-  }
+  } */
+  
   .article {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
@@ -58,6 +59,7 @@
   .article::-webkit-scrollbar-thumb {
     background-color: transparent;
   }
+
 }
 
 /* Position */
