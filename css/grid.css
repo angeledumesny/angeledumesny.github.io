@@ -1,0 +1,24 @@
+.card-project{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-image {
+  opacity: 100;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  transform: scale(1.1);
+  transition: 0.5s;
+  width: 100%;
+}
+
+.card-project:hover .first{
+  transform: scale(1);
+}
+
+.card-project:hover .second{
+  opacity:0;
+  transform: scale(1);
+}

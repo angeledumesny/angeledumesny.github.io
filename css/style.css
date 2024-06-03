@@ -1,0 +1,121 @@
+h1,h2,h3,h4,h5,h6{
+  font-family: sans-serif;
+  font-weight: 400; /*anti_faux-gras*/
+}
+
+img{
+    width: 100%;
+    display:block;
+    height:auto;
+}
+
+a {
+  font-family: "area-normal", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
+
+/******/
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-family: area-normal, sans-serif;
+  font-weight: 800;
+  font-size: 8px;
+  font-style: normal;
+  text-align: left;
+}
+
+.td{
+  font-family: area-normal, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.tableau:hover{
+  opacity: 0;
+}
+
+.titre:hover{
+  font-weight: bold;
+}
+
+a.td {
+  width: 100%;
+  display: inline-block;
+}
+
+/*                  ?????????
+
+@font-face {
+    font-family: "hibana";
+    src: local("Hibana-45SubMedium"),
+      url("font/Hibana-45SubMedium.woff2") format("opentype");
+  }
+
+  @font-face {
+    font-family: "spectral";
+    src: local("Spectral-MediumItalic"),
+      url("font/Spectral-MediumItalic.ttf") format("opentype");
+  }
+
+  cursor {
+    cursor: url('source/autre/fleche.png'), auto;
+
+    @font-face {
+      font-family: "monument grotesk";
+      src: local("MonumentGrotesk"),
+      url(font/MonumentGrotesk-Regular.woff2) format("opentype");
+    }
+
+    Area Normal:
+
+    EXTRABOLD
+    font-family: area-normal, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+
+    font-family: area-normal, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    BLACK
+    font-family: area-normal, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+    font-family: area-normal, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  .headerbis{
+    z-index: 1;
+    display: grid;
+    position: sticky;
+    top : 0px;
+    grid-template-columns: 1fr auto auto auto;
+    gap: 10px;
+    align-items: baseline;
+    background-color: white;
+  }
+  .sticky{
+    position: sticky;
+    position: top;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  a.sommaire {
+    font-family: "area-normal", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 10px;
+  }
+*/
