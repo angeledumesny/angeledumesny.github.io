@@ -1,0 +1,52 @@
+h1 {
+    color: aliceblue;
+    background-color: blue;
+    text-align: center;
+}
+
+a {
+    color: blue;
+}
+
+h6  {
+    text-align: center;
+}
+
+.gif {
+    height: 25px;
+}
+
+.gif_1 {
+    height: 100px;
+}
+
+.bibli {
+    height: 60px;
+}
+
+.motifs {
+    color: blue;
+}
+
+.survol {
+    height: 30px;
+    transition: 1s;
+}
+
+.survol_high {
+    height: 100px;
+}
+
+textarea {
+    resize: none;
+  }
+
+/*
+.survol_mov {
+    height: 30px;
+    transition: 1s;
+}
+
+.survol_mov:hover {
+    height: 100px;
+}*/
