@@ -1,111 +1,1233 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.typekit.net/klm6gjn.css">
-
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <link rel="stylesheet" href="./css/typo.css">
-    <link rel="stylesheet" href="./css/grid.css">
-    <meta name="Hello" content="Angèle DUMESNY est une étudiante en graphisme à l'ELMAD Auguste Renoir à paris.  "> 
-
-    <!-- <meta name="hello" content="loremmmmmmm"> METTRE TEXT POUR OPTIMISER LES RECHERCHES-->
-    <title>AD - Projets</title>
-    <!--  <link rel="icon" type="image/x-icon" href="source/autre/fleche.png">-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angèle Dumesny</title>
+  <link rel="alternate icon" href="source/site/cursor.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <div class="home">
-    <div class="header">
-      <div class="">
-        <a href="/index.html" class="">ANGÈLE DUMESNY</a>
-      </div>
-        <div class="links">
-          <a href="/index.html" class="">PROJETS</a>
-          <a href="/list.html" class="">INDEX</a>
-          <a href="/info.html" class="">INFO</a>
+
+  <span class="anchor" id="print"></span>
+  <span class="anchor" id="web"></span>
+  <span class="anchor" id="ludd"></span>
+
+
+  <header>
+    <h1><a href="#all">Angèle Dumesny</a></h1>
+    <nav>
+      <a href="#print">Print</a>
+      <a href="#web">Web</a>
+      <a href="#ludd">Ludd</a>
+    </nav>
+  </header>
+
+  <!-- Boutons fixes en haut à droite : XP et À propos (2 svg chacun : repos / survol) -->
+  <a class="xp-btn" href="xp.html" aria-label="XP — page expérimentale">
+    <img class="x-rest" src="source/site/bouton_xp_noir.svg" alt="">
+    <img class="x-hover" src="source/site/bouton_xp_blanc.svg" alt="" aria-hidden="true">
+  </a>
+  <button class="about-btn" id="about-open" aria-expanded="false" aria-controls="about">
+    <img class="b-closed" src="source/site/bouton_blanc.svg" alt="À propos">
+    <img class="b-open" src="source/site/bouton_noir.svg" alt="" aria-hidden="true">
+  </button>
+
+  <main class="wrap">
+    <div class="grid">
+
+      <div class="project print ludd f01">
+        <input type="checkbox" id="p1">
+        <label class="card" for="p1" tabindex="0" role="button" aria-expanded="false">
+          <img decoding="async" src="source/projects/2605_print_yann_1.png"
+            alt="Affiche citant le mémoire de Yann Morel">
+          <span class="info"><strong>Nuées invisibles</strong>Poster créé à la lecture du mémoire de Yann Morel</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2605_print_yann_2.png"
+            alt="recherche graphique"></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2605_print_yann_3.png"
+            alt="recherche graphique"></div>
+        <div class="card extra text">
+          <h2 class="t-title">Nuées <span class="o">invisibles</span></h2>
+          <p class="t-meta">Mai 2026</p>
+          <p>Affiche imaginée et réalisée à la lecture de <strong>Nuées invisibles</strong> <em>infrastructures</em>
+            mémoire de recherche de <a href="https://yann-morel.github.io/index.html" target="_blank"
+              rel="noopener">Yann Morel</a>.</p>
+          <p>J'ai voulu faire écho à la mer, à l'invisible, à la poétique de l'immatérielle, comme à son aspect politique et écologique.</p>
         </div>
+      </div>
+
+      <div class="project web f02">
+        <input type="checkbox" id="p2">
+        <label class="card wide" for="p2" tabindex="0" role="button" aria-expanded="false">
+          <img decoding="async" src="source/projects/2606_web_dcn_1.png" alt="Capture d'écran du site de la formation DCN. Page d'accueil.">
+          <span class="info"><strong>DCN</strong>Direction artistique et mise à jour du site internet de mon ancienne
+            formation : Design et création numérique</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2606_web_dcn_2.png"
+            alt="Capture d'écran du site de la formation DCN."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2606_web_dcn_3.png"
+            alt="Capture d'écran du site de la formation DCN."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2606_web_dcn_4.png"
+            alt="Capture d'écran du site de la formation DCN."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2606_web_dcn_5.png"
+            alt="Capture d'écran du site de la formation DCN."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2606_web_dcn_6.png"
+            alt="Capture d'écran du site de la formation DCN."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2606_web_dcn_7.png"
+            alt="Capture d'écran du site de la formation DCN."></div>
+        <div class="card extra text">
+          <h2 class="t-title">DCN</h2>
+          <p class="t-meta">Juin 2026</p>
+          <p>Direction artistique et mise à jour du site internet de mon ancienne formation : Design et Création Numérique. <br> disponible à l'adresse : <a href="http://memoires.ecole-estienne.net/dcn/index.html"
+              target="_blank" rel="noopener">DCN</a>.</p>
+        </div>
+      </div>
+
+      <div class="project print other ludd f03">
+        <input type="checkbox" id="p3">
+        <label class="card" for="p3" tabindex="0" role="button" aria-expanded="false">
+          <img decoding="async" src="source/projects/2602_memoire_dcn_1.png" alt="Out·Design In·Process. Couverture de mémoire de recherche.">
+          <span class="info"><strong>Out·Design In·Process</strong>Mémoire de recherche. 2026</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2602_memoire_dcn_2.png"
+            alt="Couverture et choix éditoriaux."></div>
+            <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2602_memoire_dcn_0.gif"
+            alt="Collection Pentalobe"></div> 
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2602_memoire_dcn_3.png"
+            alt="Collection Pentalobe"></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2602_memoire_dcn_4.png"
+            alt="Collection Pentalobe"></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2602_memoire_dcn_5.png"
+            alt="Collection Pentalobe"></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2602_memoire_dcn_6.png"
+            alt="Out·Design In·Process. Première double page du mémoire de recherche."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2602_memoire_dcn_7.png"
+            alt="Out·Design In·Process. L'une des dernières doubles pages du mémoire de recherche."></div>
+          <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2602_memoire_dcn_1.gif"
+            alt="Expérimentations graphiques multiples."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Out·Design In·Process</h2>
+          <p class="t-meta">Février 2026</p>
+          <p><span class="o o2">Consultable <a href="http://memoires.ecole-estienne.net/dcn/memoires/2026/ludd/3_out-design/outdesign.html" target="_blank" rel="noopener">ici</a>. </span> <br><br>
+          
+          La collection Pentalobe réunit nos mémoires de recherche. <br>
+           La vis Pentalobe est apparue en 2009 sur les macbooks. <br>
+           Un an plus tard, les usageres la remarquent lorsqu'elle apparait sur l'Iphone 4, remplaçant alors la classique vis cruciforme. Son design en forme de fleur à cinq pétales et son empreinte peu profonde la rendent pourtant plus fragile. À l'époque, les tournevis adaptés étaient introuvables sur le marché, rendant ainsi l'ouverture et la réparation impossible. Sa manufacturation, un an après, a permis de réouvrir les appareils. Aujourd'hui, la Pentalobe* reste un obstacle, mais est plus facilement contournable.<br><br>
+           La Pentalobe* devient symbole de la volonté industrielle d'éloigner l'utilisateurice de son droit de réparation.<br>
+           Là où il y a des obstacles posés, des moyens seront trouvés.<br>
+           <span class="o o1">Nous Ludds, nous nous approprions ce symbole, celui d'une tentative de restriction propriétaire déjouée.</span></p>
+        </div>
+      </div>
+
+      <div class="project web other ludd f04">
+        <input type="checkbox" id="p4">
+        <label class="card wide" for="p4" tabindex="0" role="button" aria-expanded="false">
+          <img decoding="async" src="source/projects/2605_web_ludd_1.png" alt="Capture d'écran du site atelier Ludd. Page d'accueil.">
+          <span class="info"><strong>Atelier LUDD</strong>Conception et développement d'un site web pour atelier Ludd · 2026</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2605_web_ludd_2.png"
+            alt="Capture d'écran du site atelier Ludd."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2605_web_ludd_3.png"
+            alt="Capture d'écran du site atelier Ludd."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2605_web_ludd_4.png"
+            alt="Capture d'écran du site atelier Ludd."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2605_web_ludd_5.png"
+            alt="Capture d'écran du site atelier Ludd."></div>
+        <div class="card extra"><img lo ading="lazy" decoding="async" src="source/projects/2605_web_ludd_6.png" alt="3 p'tits Ludds">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2605_web_ludd_7.png" alt="Expérimentations au pen plotter pour la conception des boutons du site.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2605_web_ludd_8.png" alt="Expérimentations au pen plotter pour la conception des boutons du site.
+">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2605_web_ludd_9.png" alt="Expérimentations au pen plotter pour la conception des boutons du site.
+">
+        </div>
+        <div class="card extra text">
+          <h2 class="t-title">Atelier LUDD</h2>
+          <p class="t-meta">Juin 2026</p>
+          <p>Pour en voir plus: <a href="https://atelierludd.github.io" target="_blank" rel="noopener">Atelier LUDD</a>.
+            <br> <br> 
+            
+          </p>
+        </div>
+      </div>
+
+      <div class="project print f05">
+        <input type="checkbox" id="p5">
+        <label class="card" for="p5" tabindex="0" role="button" aria-expanded="false">
+          <img decoding="async" src="source/projects/2606_print_dcn_invit_1.png" alt="">
+          <span class="info"><strong>Exposition de diplôme</strong>Composition de texte. 2026.</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2606_print_dcn_invit_2.png"
+            alt=""></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2606_print_dcn_invit_3.png"
+            alt=""></div>
+        <div class="card extra text">
+          <h2 class="t-title">Exposition de diplôme</h2>
+          <p class="t-meta">Juin 2026</p>
+          <p>Participation à l'invitation à l'exposition de diplôme par un travail de composition texte. Cette affiche a été réalisée par les 4 projets de diplômes du master DCN, guidée par <a href="https://www.instagram.com/antipykal/">Lucie Pensivy</a>.</p>
+        </div>
+      </div>
+
+
+      <div class="project ludd other f06">
+        <input type="checkbox" id="p36">
+        <label class="card" for="p36" tabindex="0" role="button" aria-expanded="false">
+          <img decoding="async" src="source/projects/2606_ludd_cartel_2.png" alt="Cartel d'intro à l'exposition de diplôme.">
+          <span class="info"><strong>Bienvenue !</strong>Écriture et design éditoral des cartels de l'exposition de diplômes. 2026</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2606_ludd_cartel_3.png"
+            alt="Cartel d'explications des différentes machines de la catégorie réanimer après l'obsolescence."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2606_ludd_cartel_4.png"
+            alt="Cartel d'explications des différentes machines de la catégorie MIP."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2606_ludd_cartel_5.png"
+            alt="Cartel d'explications des différentes machines de la catégorie imprimante refonctionnalisée."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2606_ludd_cartel_6.png"
+            alt="Cartel d’explications des différentes machines de la catégorie électroménager détournée."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2606_ludd_cartel_1.png"
+            alt="Affiche d'une constellation des citations qui ont porté notre réflexion."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Bienvenue à l'Atelier Ludd !</h2>
+          <p class="t-meta">Avril 2026</p>
+          <p> Kézako Atelier Ludd ? <br> <br> 
+             
+             <span class="o o1">Notre collectif imagine des ateliers d’expérimentation graphique et de bidouille ludd-ique itinérant.<br>  </span>
+             
+             À l’heure où les objets technologiques sont toujours plus omniprésents, complexes et opaques, nous nous essayons à déjouer leurs obsolescences et à nous amuser de leurs contraintes. Nous proposons un espace pour s’emparer d’objets électroniques obsolètes et les refonctionnaliser.<br> <br> 
+             
+             De Ned Ludd aux Escargots, nous avons exploré des détours, multiplié les croisements et les bifurcations autour d’une simple proposition : ralentir et faire ensemble. <span class="o o1"> Cette exposition de diplôme est une invitation à parcourir près de six mois de recherches, de rencontres, de collectes, d’expérimentations et de créations ludd-iques. </span> Elle rassemble nos machines collectives, les ateliers qui les ont vues naître et la recherche qu’elles ont nourrie.<br> <br> 
+
+             <span class="o o1"> Explorer les chemins obliques plutôt que les lignes droites. Promis, ça vaut le détour !</span>
+             <br> <br> 
+             
+             Angèle, Lucie et Yann. 
+
+           Pour en voir plus: <span class="o o1"><a href="https://atelierludd.github.io" target="_blank" rel="noopener">Atelier LUDD</a></span>.
+          </p>
+        </div>
+      </div>
+
+      <div class="project ludd other f06">
+        <input type="checkbox" id="p6">
+        <label class="card" for="p6" tabindex="0" role="button" aria-expanded="false">
+          <img decoding="async" src="source/projects/2604_photo_ludd_1.png" alt="">
+          <span class="info"><strong>Bidouilles et Bricolages</strong>· 2026</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2604_photo_ludd_2.png"
+            alt="Supermix"></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2604_photo_ludd_3.png"
+            alt="MIP VRRR"></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2604_photo_ludd_4.png"
+            alt="MIP Dingo"></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2604_photo_ludd_5.png"
+            alt="MIP BZZZ"></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2604_photo_ludd_6.png"
+            alt="Imprimante QC5"></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2604_photo_ludd_7.png"
+            alt="Écran mis à nu"></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2604_photo_ludd_8.png"
+            alt="WIP"></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2604_photo_ludd_9.png"
+            alt="Mip Toopie"></div>
+        <div class="card extra text">
+          <h2 class="t-title">Bidouilles et Bricolages</h2>
+          <p class="t-meta">Avril 2026</p>
+          <p>Les ateliers Ludd, c’est : récupérer, ouvrir, comprendre, transformer, bidouiller et créer collectivement ! Nous proposons des espaces pour s’emparer des objets électroniques obsolètes, pour les refonctionnaliser et les détourner de manière joyeuse et collective. Un moment pour expérimenter et transmettre des savoirs autour des enjeux low-tech. Une invitation à faire autrement, à oser les alternatives et à multiplier les pratiques.<br> <br> 
+           Angèle, Lucie et Yann. <br><br>
+
+           Pour en voir plus: <a href="https://atelierludd.github.io" target="_blank" rel="noopener">Atelier LUDD</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="project print ludd other f07">
+        <input type="checkbox" id="p8">
+        <label class="card" for="p8" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_snail_1.png" alt="Dessine moi un escargot. Couverture de fanzine.">
+          <span class="info"><strong>Dessine moi un escargot</strong>Mars 2026</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async"
+            src="source/projects/2604_print_ludd_snail_2.png" alt="Dessine moi un escargot. Couverture de fanzine."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async"
+            src="source/projects/2604_print_ludd_snail_3.png" alt="Fanzine: Dessine moi un escargot."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_snail_4.png"
+            alt="Dessine moi un escargot. Couverture de fanzine."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_snail_6.png"
+            alt="Dessine moi un escargot. Couverture de fanzine."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_snail_9.png"
+            alt="Dessine moi un escargot. Couverture de fanzine."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async"
+            src="source/projects/2604_print_ludd_snail_7.png" alt="Dessine moi un escargot. Couverture de fanzine."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async"
+            src="source/projects/2604_print_ludd_snail_8.png" alt="Dessine moi un escargot. Couverture de fanzine."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_snail_5.png"
+            alt="Dessine moi un escargot. Couverture de fanzine."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Dessine moi un escargot</h2>
+          <p class="t-meta">Mars 2026</p>
+          <p>
+            Fanzine de recherche plastique et théorique autour de la figure de l'escargot et de ce qu'elle représente pour nous ! Citation de Marie Verdeil et Olivier Hamant. Conçue et composée en logiciels libres (Traceur Sipratic, traceur Glamour, XP-425, 3D à 2D. InDesign, Scribus, KidPix, Spectrolite, Cura). Imprimé en avril 2026 avec la risographie de l'école Estienne, Paris puis réédité en mai 2026 avec la risographie de l'Edulab de l'Hotel Pasteur, Rennes.
+            <br><br>
+            Alors qu'est-ce qu'un escargot ? <br>
+          Il symbolise pour nous la décroissance. <br>
+          <span class="o o1">Une invitation à passer du très très vite à la lenteur, à repenser nos manières de créer. </span>Il porte sa maison sur son dos, de la même manière, les Ludds se déplacent d'espaces en espaces en portant leurs outils pour y installer des ateliers ludd-ique, pour oser, pour agir, pour faire différemment, pour faire collectivement. 
+          <br><br>
+
+           Pour en voir plus: <a href="https://atelierludd.github.io" target="_blank" rel="noopener">Atelier LUDD</a>.</p>
+
+        </div>
+      </div>
+
+      <div class="project print ludd f09">
+        <input type="checkbox" id="p9">
+        <label class="card" for="p9" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_question_1.png" alt="Questionnaire de satisfaction revisité, pour récolter des témoignages matériels à la suite des ateliers.">
+          <span class="info"><strong>Questions</strong>Mai 2026</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async"
+            src="source/projects/2604_print_ludd_question_2.png" alt="Questionnaire de satisfaction revisité, pour récolter des témoignages matériels à la suite des ateliers."></div>
+        <div class="card extra"><img loading="lazy" decoding="async"
+            src="source/projects/2604_print_ludd_question_3.png" alt="Questionnaire de satisfaction revisité, pour récolter des témoignages matériels à la suite des ateliers."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Questions</h2>
+          <p class="t-meta">Mai 2026</p>
+          <p>Questionnaire de satisfaction revisité, pour récolter des témoignages matériels à la suite des ateliers.<br><br>
+
+           Pour en voir plus: <a href="https://atelierludd.github.io" target="_blank" rel="noopener">Atelier LUDD</a>.</p>
+          
+        </div>
+      </div>
+
+      <div class="project print ludd other f10">
+        <input type="checkbox" id="p10">
+        <label class="card" for="p10" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_21m_1.png" alt="Restitution de 21 mètres de compositions des résultats de nos ateliers de machine à dessiner.">
+          <span class="info"><strong>21m</strong>2026</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_21m_7.png"
+            alt="Restitution de 21 mètres de compositions des résultats de nos ateliers de machine à dessiner."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async"
+            src="source/projects/2604_print_ludd_21m_2.png" alt=""></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_21m_3.png"
+            alt="Restitution de 21 mètres de compositions des résultats de nos ateliers de machine à dessiner."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_21m_4.png"
+            alt="Restitution de 21 mètres de compositions des résultats de nos ateliers de machine à dessiner."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_21m_5.png"
+            alt="Restitution de 21 mètres de compositions des résultats de nos ateliers de machine à dessiner."></div>
+        <div class="card extra text">
+          <h2 class="t-title">21m</h2>
+          <p class="t-meta">Avril 2026</p>
+          <p>Restitution de 21 mètres de compositions des résultats de nos ateliers de machine à dessiner. <br><br>Une fois accrochée une imprimante refonctionnalisée permettait de montrer doucement toutes ses créations tremblantes et colorées.<br><br>
+
+           Pour en voir plus: <a href="https://atelierludd.github.io" target="_blank" rel="noopener">Atelier LUDD</a>.</p>
+          
+        </div>
+      </div>
+
+      <div class="project print f11">
+        <input type="checkbox" id="p11">
+        <label class="card" for="p11" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_dead_1.png" alt="Tête de Ned Ludd recomposée en caractère de plomb X I. Du ascii sans numérique.">
+          <span class="info"><strong>Dead Ludd</strong>Expérimentations en caractères de plombs. 2026</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_dead_2.png"
+            alt="Tête de Ned Ludd recomposée en caractère de plomb X I. Du ascii sans numérique."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_dead_0.gif"
+            alt="Tête de Ned Ludd recomposée en caractère de plomb X I. Du ascii sans numérique."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_dead_3.png"
+            alt="Tête de Ned Ludd recomposée en caractère de plomb X I. Du ascii sans numérique."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Dead Ludd</h2>
+          <p class="t-meta">Avril 2026</p>
+          <p>Tête de Ned Ludd recomposée en caractère de plomb. Du ascii sans numérique. <br><br>
+
+           Pour en voir plus: <a href="https://atelierludd.github.io" target="_blank" rel="noopener">Atelier LUDD</a>.</p>
+        </div>
+      </div>
+
+      <div class="project print ludd other f08">
+        <input type="checkbox" id="p7">
+        <label class="card " for="p7" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_xp_1.png" alt="">
+          <span class="info"><strong>Ça gonfle!</strong>Sérigraphie à l'encre gonflante. Décembre 2025</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_xp_2.png"
+            alt=""></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_xp_3.png"
+            alt=""></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_ludd_xp_4.png"
+            alt=""></div>
+        <div class="card extra text">
+          <h2 class="t-title">Ça gonfle!</h2>
+          <p class="t-meta">Décembre 2025</p>
+          <p>Sérigraphie à l'encre gonflante sur vitre issue de déchetteries. Des expérimentations pour ateliers Ludd et pour donner formes à nos références et à nos questions.<br><br>
+
+           Pour en voir plus: <a href="https://atelierludd.github.io" target="_blank" rel="noopener">Atelier LUDD</a>.</p>
+          
+        </div>
+      </div>
+
+      <div class="project print f12">
+        <input type="checkbox" id="p12">
+        <label class="card" for="p12" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2511_print_dcn_panic-room_1.png" alt="Panic room.">
+          <span class="info"><strong>Panic room</strong>Revue de création collective. 2025</span>
+        </label>
+          <div class="card extra"><img loading="lazy" decoding="async"
+            src="source/projects/2511_print_dcn_panic-room_0.gif" alt="1 par an comme témoin de notre temps."></div>
+        <div class="card extra"><img loading="lazy" decoding="async"
+            src="source/projects/2511_print_dcn_panic-room_3.png" alt="Conception de la couverture à partir de déchet numérique, ici un clavier sorti de déchetterie."></div>
+        <div class="card extra"><img loading="lazy" decoding="async"
+            src="source/projects/2511_print_dcn_panic-room_4.png" alt="Enfin imprimé !"></div>
+        <div class="card extra"><img loading="lazy" decoding="async"
+            src="source/projects/2511_print_dcn_panic-room_5.png" alt="Enfin imprimé !"></div>
+        <div class="card extra"><img loading="lazy" decoding="async"
+            src="source/projects/2511_print_dcn_panic-room_6.png" alt="Enfin imprimé !"></div>
+        <div class="card extra text">
+          <h2 class="t-title">Panic room</h2>
+          <p class="t-meta">Novembre 2025</p>
+          <p>Revue imprimée sur les chutes de papiers des presses d'Estienne. Parce qu'après la détresse de la D13 et le désordre en D14 il faut bien une pause !</p>
+        </div>
+      </div>
+
+
+       <div class="project f18">
+        <input type="checkbox" id="p37">
+        <label class="card" for="p37" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2510_inspire_0.png" alt="Inspire, une parenthèse détente.">
+          <span class="info"><strong>Inspire</strong>2025</span>
+        </label>
+
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2510_inspire_0.gif"
+            alt="Inspire, une parenthèse détente."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2510_inspire_3.png"
+            alt="Inspire, une parenthèse détente."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2510_inspire_4.png"
+            alt="Inspire, une parenthèse détente."></div>
+        
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2510_inspire_2.png"
+            alt="Inspire, une parenthèse détente."></div>
+
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2510_inspire_1.png"
+            alt="Inspire, une parenthèse détente."></div>
+        
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2510_inspire_8.png"
+          alt="Inspire, une parenthèse détente."></div>
+
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2510_inspire_9.png" alt="Inspire, une parenthèse détente."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2510_inspire_5.png" alt="Inspire, une parenthèse détente."></div>
+            
+        <div class="card extra text">
+          <h2 class="t-title">Inspire</h2>
+          <p class="t-meta">Septembre 2025</p>
+          <p>Le <a href="https://www.ghu-paris.fr/fr/le-lab-ah-le-laboratoire-dinnovation-culturelle-par-le-design-du-ghu-paris">Lab ah</a>, Autrement dit le laboratoire d'innovation culturelle par le design du GHU Paris nous a proposé un projet d'expérimentations autour de la relaxation de leurs patients. Inspire est un dispositif de méditation et d'apaisement guidé par le son et l'image, équipée d'un capteur de respiration intégré dans Toudoudou, une couverture lestée en forme de calin. </p>
+        </div>
+      </div>
+
+      <div class="project print f13">
+        <input type="checkbox" id="p13">
+        <label class="card wide" for="p13" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2604_print_dcn_festin_1.png" alt="Menu pour expérience gustativo-visuelle collective.">
+          <span class="info"><strong>Festin</strong>Décembre 2025.</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async"
+            src="source/projects/2604_print_dcn_festin_2.png" alt="Invitation au festin d'anniversaire."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_dcn_festin_3.png"
+            alt="Menu du festin."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async"
+            src="source/projects/2604_print_dcn_festin_4.png" alt="Régalade."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_dcn_festin_5.png"
+            alt="Régalade."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_dcn_festin_6.png"
+            alt="La cerise sur le gâteau."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_dcn_festin_7.png"
+            alt="La cerise sur le gâteau."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Festin</h2>
+          <p class="t-meta">Décembre 2025.</p>
+          <p>Un anniversaire sans nom, une fête inqualifiable, mais un festin néanmoins ! <br>
+          Performance joyeuse et collective pour fêter les 10 ans de la formation DCN. <br> Du VJ sur votre nappe, sur votre entrée, sur votre plat pour le fromage et même sur votre gâteau ! Aucun menu n’aurait pu vous y préparer, mais <span class="o o2">bon appétit !</span>  </p>
+        </div>
+      </div>
+
+      <div class="project print other f08">
+        <input type="checkbox" id="p35">
+        <label class="card " for="p35" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2603_carte_estienne_1.png" alt="Proposition carte étudiante 1 : Kidpix et Gimp.">
+          <span class="info"><strong>Carte étudiante</strong>2026</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2603_carte_estienne_2.png"
+            alt="Proposition carte étudiante 2 : Gimp et Kidpix"></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2603_carte_estienne_3.png"
+            alt="Proposition carte étudiante 3 : un crayon puis Gimp"></div>
+        <div class="card extra text">
+          <h2 class="t-title">Carte étudiante</h2>
+          <p class="t-meta">Décembre 2025</p>
+          <p>Propositions pour le concours organisé par l'école Estienne. <br> La demande proposée un visuel pour la carte étudiante 2027. Mon but ? N'utiliser que des logiciels obsolètes ou étranges pour les réaliser ! </p>
+          
+        </div>
+      </div>
+
+      <div class="project print f14">
+        <input type="checkbox" id="p14">
+        <label class="card" for="p14" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2512_print_jungle_1.png" alt="Jungle V1.">
+          <span class="info"><strong>Jungle</strong>2025.</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2512_print_jungle_2.png"
+            alt="Jungle V2".></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2512_print_jungle_3.png"
+            alt="Jungle V3."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2512_print_jungle_4.png"
+            alt="Jungle V4."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2512_print_jungle_5.png"
+            alt="Jungle V5."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2512_print_jungle_7.png"
+            alt="Jungle V6."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2512_print_jungle_8.png"
+            alt="Jungle V8.">Jungle sans nom.</div>
+        <div class="card extra text">
+          <h2 class="t-title">Jungle</h2>
+          <p class="t-meta">Décembre 2025</p>
+          <p>Composition, typographie et déclinaisons pour une fête, une célébration.</p>
+        </div>
+      </div>
+
+      <div class="project print f15">
+        <input type="checkbox" id="p15">
+        <label class="card" for="p15" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2604_print_gaston_1.png" alt="De la pâte à modeler à l'affiche, 2026. V1.">
+          <span class="info"><strong>NOTSAG</strong>De la pâte à modeler à l'affiche, 2026.</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_gaston_2.png"
+            alt="De la pâte à modeler à l'affiche, 2026. V2."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_gaston_3.png"
+            alt="Expérimentations."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_gaston_4.png"
+            alt="Expérimentations."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_gaston_5.png"
+            alt="Expérimentations."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_gaston_6.png"
+            alt="Les originales."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2604_print_gaston_7.png"
+            alt="Mains des artistes."></div>
+        <div class="card extra text">
+          <h2 class="t-title">NOTSAG</h2>
+          <p class="t-meta">Avril 2026</p>
+          <p>Transformation de sculpture d'artiste en herbes en une affiche attrape-rêves.</p>
+        </div>
+      </div>
+
+      <div class="project print f34">
+        <input type="checkbox" id="p34">
+        <label class="card" for="p34" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/26_trash_1.png" alt="Affiche pour poubelles.">
+          <span class="info"><strong>trash</strong>Affiche pour poubelles. 2026.</span>
+        </label>
+        <div class="card extra text">
+          <h2 class="t-title">trash</h2>
+          <p class="t-meta">2026</p>
+          <p>Petite expérimentation joyeuse et pratique de poster pour ne plus oublier de sortir ses poubelles.</p>
+        </div>
+      </div>
+
+      <div class="project print other f16">
+        <input type="checkbox" id="p16">
+        <label class="card" for="p16" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/25_meteores_1.png" alt="Couverture de l'édition Météores. Restitution des écritures et recherche graphique.">
+          <span class="info"><strong>Météores</strong>Science fiction à la BULAC. 2025.</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_meteores_2.png" alt="Tranche de l'édition Météores.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_meteores_8.png" alt="Touch some leaf. Restitution des écritures et recherche graphique.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_meteores_3.png" alt="Météores, recherche graphique.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_meteores_4.png" alt="Météores, recherche graphique.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_meteores_5.png" alt="Zoom sur une carotte des déchets numériques trouvés sur Météores.">
+        </div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/25_meteores_6.png"
+            alt="Créations 3D des mondes fictifs de Météores."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/25_meteores_7.png"
+            alt="Objets découverts lors des fouilles archéologiques des scientifiques et sociologues de la Bulac."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_meteores_9.png" alt="Frise chronologique des événements fictifs et de l'histoire de Météores, sérigraphie sur toile.">
+        </div>
+        <div class="card extra text">
+          <h2 class="t-title">Météores</h2>
+          <p class="t-meta">2025</p>
+          <p>
+            <span class="o o1">« Systèmes. Comment s’écrit demain ? »</span>
+            <br><br>
+            Une exposition sur le thème des écritures imaginaires et de la futuristoire.
+            <br> Nous nous sommes plongés dans les collections pour étudier les nombreux alphabets et systèmes d’écriture présents à la BULAC (Bibliothèque universitaire des langues et civilisations). Inspirés par ces systèmes d’écriture, nous avons imaginé des mondes disparus qui ne peuvent se dévoiler qu’à travers des écrits fragmentés. Se faisant tour à tour papyrologues, archéologues et enquêteurs, les installations qu’ils ont conçues révèlent au public leurs découvertes sur ces civilisations perdues. 
+            <br><br>
+            Plus d'information sur le site de la <span class="o o1"><a href="https://www.bulac.fr/systemes-comment-secrit-demain-carte-blanche-lecole-estienne">BULAC</a></span>.
+          
+          </p>
+        </div>
+      </div>
+
+      <div class="project print f18">
+        <input type="checkbox" id="p18">
+        <label class="card" for="p18" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2502_print_vaughan_1.png" alt="Concept d’affiches : One punchline one punchcard. I am a mathematician, 1/6.">
+          <span class="info"><strong>Dorothy Vaughan</strong>2025</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2502_print_vaughan_2.png"
+            alt="Concept d’affiches : One punchline one punchcard. I am a woman, 2/6."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2502_print_vaughan_3.png"
+            alt="Concept d’affiches : One punchline one punchcard. I am a black, 3/6."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2502_print_vaughan_4.png"
+            alt="Concept d’affiches : One punchline one punchcard. I am a mother, 4/6."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2502_print_vaughan_5.png"
+            alt="Photos des affiches in situ, avec celleux qui les ont conçues."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2502_print_vaughan_8.png"
+            alt="Photos des affiches in situ, avec celleux qui les ont conçues."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2502_print_vaughan_9.png"
+            alt="Photos des affiches in situ, avec celleux qui les ont conçues."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2502_print_vaughan_6.png"
+            alt="Photos des affiches in situ, avec celleux qui les ont conçues."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Dorothy Vaughan</h2>
+          <p class="t-meta">2025</p>
+          <p>L'université de Villetaneuse a renommé ses amphithéâtres pour faire honneur aux femmes qui ont marqué la science. <br> Travail de poster pour accompagner ce changement à l'intérieur des amphithéâtres, mais aussi d'un film qui offre une première porte d'entrée pour découvrir la vie remarquable de <a href="https://youtu.be/34RP2MhCs5Q">Dorothy Vaughan</a>. </p>
+        </div>
+      </div>
+
+      <div class="project print f32">
+        <input type="checkbox" id="p38">
+        <label class="card" for="p38" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/2501_hawayenan_1.png" alt="Identité visuelle et déclinaisons pour la communication d'HAWAYENAN.">
+          <span class="info"><strong>HAWAYENAN</strong>Travail d'identité et de communication pour une association. 2025</span>
+        </label>
+            <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2501_hawayenan_5.png"
+            alt="Identité visuelle et déclinaisons pour la communication d'HAWAYENAN."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2501_hawayenan_3.png"
+            alt="Identité visuelle et déclinaisons pour la communication d'HAWAYENAN."></div>
+            <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/2501_hawayenan_6.png"
+            alt="Identité visuelle et déclinaisons pour la communication d'HAWAYENAN."></div>
+            <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2501_hawayenan_4.png"
+            alt="Restitution du workshops."></div>
+            <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2501_hawayenan_7.png"
+            alt="Tests sur Gradientator."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/2501_hawayenan_2.png"
+            alt="Tests de grilles et dégradés sur Gradientator."></div>
+        <div class="card extra text">
+          <h2 class="t-title">HAWAYENAN</h2>
+          <p class="t-meta">Février 2025</p>
+          <p>HAWAYENAN, en langue Kamentsa, signifie « enseigner », ou, plus poétiquement, <span class="o o1">« semer une parole dans le cœur de l’autre »</span>. Alors que les cultures originelles sont menacées par la nôtre, ceux qui les portent continuent pourtant d’enseigner à mieux aimer le vivant. <br><br> L’association <a href="https://www.hawayenan.org">HAWAYENAN</a> rachète les terres volées aux peuples racines afin de leur rendre. <br><br> Lors d'un workshops d'une semaine avec la classe de <a href="https://www.ecole-estienne.paris/formation/dsaa-strategie-images-medias/presentation/">DSAA DSM</a> Nous avons été amenées à accompagner cette association et proposer une nouvelle identité facilement déclinable pour faciliter la communication et la discussion avec le grand public.
+        </div>
+      </div>
+
+      <div class="project print f19">
+        <input type="checkbox" id="p19">
+        <label class="card wide" for="p19" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/25_bx_1.png" alt="Bruxelles ma belle, septante jours de libres & pas une drache en vue !">
+          <span class="info"><strong>Bruxelles ma belle</strong>Vlog de stage. 2026.</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/25_bx_2.gif" alt="Circulations"></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_bx_2.png" alt="Cahier de recherche graphique pendant le stage."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_bx_3.png" alt="Tests et dessins en brol, à ton aise ;)"></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_bx_4.png" alt="Cahier de recherche graphique."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_bx_6.GIF" alt="Cahier de recherche graphique."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/25_bx_5.png" alt="Capture d'écran du vlog de stage.">
+        </div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/25_bx_6.png" alt="Capture d'écran du vlog de stage.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_bx_7.gif" alt="Girophares."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Bruxelles ma belle</h2>
+          <p class="t-meta">Février à mai 2025</p>
+          <p>Stage de trois mois chez <a href="https://www.tacticasbl.be/">Tactic</a>, une ASBL belge qui, depuis 2002, installe des outils libres, durables et éthiques pour des associations et collectifs militants et les accompagne pour une prise en main autonome de ces outils. <br> <br> <span class="o o1">Bruxelles ma belle, septante jours de libres & pas une drache en vue : </span>  <br> Un beau moment donc un joli film que j'ai concocté pour m'en rappeler, bientôt disponible sur vos écrans !</p>
+        </div>
+      </div>
+
+      <div class="project print f20">
+        <input type="checkbox" id="p20">
+        <label class="card" for="p20" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/25_curseurs_1.png" alt="Des réseaux décentralisés pour résister.">
+          <span class="info"><strong>Curseurs n°5 </strong> Corrections, éditions et créations pour ce périodique bruxellois. Avril 2025.</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/25_curseurs_2.png"
+            alt="Des réseaux décentralisés pour résister. Poster page centrale."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/25_curseurs_3.png"
+            alt="Recherche et expérimentations sur Gimp."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/25_curseurs_4.png"
+            alt="Recherche et expérimentations en soudure sur composants électroniques."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_curseurs_5.png" alt="Démontage de déchets électroniques.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_curseurs_6.png" alt="Recherche et expérimentations graphiques.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_curseurs_7.png" alt="Recherche et expérimentations graphiques.">
+        </div>
+        <div class="card extra text">
+          <h2 class="t-title">Curseurs n°5</h2>
+          <p class="t-meta">Avril 2025</p>
+          <p><span class="o o1">"Des réseaux décentralisés pour résister" </span> 
+            Poster basé sur des composants d’ordinateurs mis à plat et travaillés graphiquement en jouant avec les couleurs et transparences. À consulter sur le site de la revue: <a href="https://www.curseurs.be/numeros/numero-5/article/des-reseaux-decentralises-pour-resister-poster">Curseurs</a>. <br> <br>
+
+            En 2023, Tactic ASBL lance Curseurs, un journal qui se veut un espace de sensibilisation, de débat, d’information et d’analyse des technologies numériques et de leurs enjeux politiques et sociaux, avec une approche critique assumée. La publication, distribuée gratuitement à 5000 exemplaires dans différents lieux à Bruxelles et dans les environs, est disponible en ligne. Chaque numéro intègre un dossier principal thématique et d’autres contributions hors dossier. 
+          </p>
+        </div>
+      </div>
+
+      <div class="project print f17">
+        <input type="checkbox" id="p17">
+        <label class="card" for="p17" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/25_tempus_fugit_1.png" alt="Projet d'édition collective. Couvertures composées et superposées.">
+          <span class="info"><strong>Tempus Fugit</strong>2025</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_tempus_fugit_2.png" alt="Projet d'édition collective. Couvertures composées et superposées.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_tempus_fugit_3.png" alt="Restitution sous forme de poster.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/25_tempus_fugit_4.png" alt="Poster de citations.">
+        </div>
+        <div class="card extra text">
+          <h2 class="t-title">Tempus Fugit</h2>
+          <p class="t-meta">2025</p>
+          <p>Travail d'écriture accompagnée de l'écrivaine de science-fiction <a href="https://fr.wikipedia.org/wiki/Ketty_Steward">Ketty Steward</a>. <br> Travail qui s'est suivi d'une retranscription graphique et éditoriale, de son travail de conception collective à sa réalisation.</p>
+        </div>
+      </div>
+
+      <div class="project print f21">
+        <input type="checkbox" id="p21">
+        <label class="card" for="p21" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/24_flane_1.png" alt="Titre du poème et un oiseau circonflexe atterri.">
+          <span class="info"><strong>Flâne</strong>Poème imagé. 2024.</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_flane_5.png" alt="Étapes 1 : du sucre fin et un scanner."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_flane_0.gif" alt="Étapes 1/2 : du sucre fin et un scanner"></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_flane_3.png" alt="Étapes 2 : Nettoyage d'image."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_flane_4.png" alt="Étapes 3 : Composition"></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_flane_2.png" alt="Étapes 4 : Décomposition"></div>
+        
+        <div class="card extra text">
+          <h2 class="t-title">Flâne</h2>
+          <p class="t-meta">Septembre 2024</p>
+          <p> <span class="o o1">Flâne seul.e ou accompagné.e.</span> <br><br> 
+
+Composé de deux syllabes, tu sembles pourtant te fondre en un seul souffle. 
+Comme une bouffée d’air, tu déambules au hasard des rues, et je te suis, charmée.
+Quand je te prononce doucement, tu glisses entre mes lèvres à peine entrouvertes, flottant, tu m’enveloppes, tu t’envoles et puis tu planes, Flâne, sans jamais savoir où tu vas te poser. 
+Alors Flâne, glisse, flotte. Sans penser juste vole. Sans fanfaronner, Flâne. <br><br> 
+
+Tu es composé de cinq lettres, il me faut deux lignes pour t’incanter.
+Une pour toutes tes lettres, qui en calligraphie se réunissent d’un seul trait arrondi et bouclé. 
+Et une pour ton accent, un oiseau, qui rappelle l’oisiveté, ta cousine. </p>
+        </div>
+      </div>
+
+      <div class="project print f22">
+        <input type="checkbox" id="p22">
+        <label class="card" for="p22" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/24_shiver_1.png" alt="Sérigraphie collective. Septembre 2024.">
+          <span class="info"><strong>Shiver</strong>Sérigraphie collective. Septembre 2024.</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_shiver_2.png" alt="Sérigraphie collective. Septembre 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_shiver_3.png" alt="Sérigraphie collective. Septembre 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_shiver_4.png" alt="Sérigraphie collective. Septembre 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_shiver_5.png" alt="Sérigraphie collective. Septembre 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_shiver_6.png" alt="Sérigraphie collective. Septembre 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_shiver_7.png" alt="Sérigraphie collective. Septembre 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_shiver_8.png" alt="Sérigraphie collective. Septembre 2024."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Shiver</h2>
+          <p class="t-meta">Septembre 2024</p>
+          <p>Projet de poster grand format à quatre mains. La musique de <a href="https://www.instagram.com/las_vegaspard/">Gaspard Calais</a>, mes cassures, dessins et bouts d'électronique, les souvenirs de <a href="https://yann-morel.github.io/">Yann Morel</a> et le couteau suisse de <a href="https://www.instagram.com/antipykal/">Lucie Pensivy</a>. Tous ces morceaux de nous dans une grande composition <span class="o o3">vibrante </span>.</p>
+        </div>
+      </div>
+
+      <div class="project print f23">
+        <input type="checkbox" id="p23">
+        <label class="card" for="p23" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/24_calendrier_1.png" alt="Couverture du calendrier avec impressions en risographie du service d'assiettes familial.">
+          <span class="info"><strong>Calendrier</strong>Janvier 2024.</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_calendrier_2.png" alt="Quelques marque-pages des mois en risographie.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_calendrier_3.png" alt="Page de recette d'une daube provençale.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_calendrier_4.png" alt="Dernière page et remerciement aux anciennes.">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_calendrier_5.png" alt="Détails en risographie.">
+        </div>
+        <div class="card extra text">
+          <h2 class="t-title">Calendrier</h2>
+          <p class="t-meta">Janvier 2024</p>
+          <p>Chaque année nous réalisons à plusieurs mains, un calendrier familial qui permet la collaboration et la réunion d’une famille nombreuse mais éclatée. <br><br>
+            <span class="o o1">«Cuisiner ensemble»  </span> est au coeur de l’édition 2024, chaque membre de la famille s’est vu attribuer un mois et a envoyé une recette de saison. Pour mettre à l’honneur la tradition du repas, le service familial hérité de ma grand-mère a été scanné puis imprimé en risographie, composant un motif au fil des pages/mois.</p>
+        </div>
+      </div>
+
+      <div class="project print other f24">
+        <input type="checkbox" id="p24">
+        <label class="card" for="p24" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/24_Camp4_1.png" alt="Images et tests Camp4 2024.">
+          <span class="info"><strong>Camp4</strong>2022 à 2024</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_2.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_3.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_5.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_6.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_7.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_8.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_9.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_10.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_11.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_12.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/24_Camp4_13.png" alt="Images et tests Camp4 2024."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Camp4</h2>
+          <p class="t-meta">2024</p>
+          <p>Cet événement prend place à la fin de l’été à <span class="o o1">Pont-en-Royans</span>. <br> On y voit des passionnées d’escalade et de Highline, comme des débutants et des familles. Pendant 3 ans j'ai pu participer à la création de l'identité de l'événement. <br> Voici quelques images et expérimentations de sa dixième et dernière édition à l'été 2024.</p>
+        </div>
+      </div>
+
+      <div class="project print other f25">
+        <input type="checkbox" id="p25">
+        <label class="card" for="p25" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/22_renoir_memoire_1.png"
+            alt="Couverture du mémoire de recherche de DNMADe. Risographie.">
+          <span class="info"><strong>DNMADe Recherche</strong>Diplôme 2024.</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/22_renoir_memoire_2.png"
+            alt="Couverture du mémoire de recherche de DNMADe. Risographie."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/22_renoir_memoire_3.png"
+            alt="Photo d'exposition de diplôme et de recherche."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/22_renoir_memoire_4.png"
+            alt="Photo d'exposition de diplôme et de recherche."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/22_renoir_memoire_5.png"
+            alt="Photo d'exposition de diplôme et de recherche."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/22_renoir_memoire_6.png"
+            alt="Photos de classe: à très vite les copains <3"></div>
+        <div class="card extra text">
+          <h2 class="t-title">Diplôme DNMADe</h2>
+          <p class="t-meta">2024</p>
+          <p>Mon mémoire se base sur deux constatations:
+            La première est que, en tant qu’étudiants.es en design graphique, nous sommes le futur de la profession.
+            Notre pratique et les valeurs qu’elle porte sont également celles qui seront la norme dans le futur. Alors
+            que voulons-nous apporter et remettre en question ? <br><br>
+            La deuxième est que de tout temps le design graphique a évolué et a été conditionné par ses outils.
+            Seulement cette relation à l’outil a grandement évolué et elle peut se résumer à un seul nom : la suite
+            Adobe. Une collection de PAO onéreuse, dont le fonctionnement nous est caché, à l’instar d’une boîte noire,
+            et qui est pourtant la norme de notre métier. On ne peut ni l’adapter à notre pratique ni s’empêcher d’être
+            influencé par les effets qui nous sont proposés (ce qui standardise notre travail). <span class="o o1">Notre
+              pratique est donc dépendante, voire soumise, à ces logiciels. </span> <br><br>
+            Alors en tant que futur professionnel il est important de remettre en question notre rapport à cet outil.
+            D’abord en comprenant l’histoire de cette relation, la manière dont ils fonctionnent et enfin quelles
+            alternatives existent, et lesquelles nous devons créer pour que notre métier nous ressemble et porte nos
+            valeurs.</p>
+        </div>
+      </div>
+
+      <div class="project print f26">
+        <input type="checkbox" id="p26">
+        <label class="card" for="p26" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/22_teuf_1.png" alt="Format A3 plié.">
+          <span class="info"><strong>La teuf et le virus</strong>Septembre 2023.</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/22_teuf_2.png"
+            alt="Format A3 déplié."></div>
+        <div class="card extra text">
+          <h2 class="t-title">La teuf et le virus</h2>
+          <p class="t-meta">Septembre 2023</p>
+          <p>Durant la période de confinement sanitaire, de mars à mai 2020, Gallimard a publié 69 textes d’auteurs sur
+            la crise, sous le nom de Tracts de crise.
+            Chaque étudiant a choisi un de ces textes et a proposé une nouvelle mise
+            en page dans un format contraint (A3 recto verso). La composition devait
+            soutenir l’engagement du texte en plongeant le lecteur dans une expérience
+            de lecture singulière, afin de prendre du recul, se questionner et peut-être
+            enfin s'actionner. <br><br>
+            Le texte de Danièle Sallenave a résonné, pour moi, comme un texte qui nous montre le chemin, un phare dans
+            la nuit qui veut nous guider dans une période où l’humanité avance clairement en eaux troubles. <span
+              class="o o1">Un texte qui nous montre comme on s’enfonce ou comme on pourrait émerger de l’eau
+            </span>c’est cette polysémie que j'ai voulu mettre en valeur ici.
+          </p>
+        </div>
+      </div>
+
+      <div class="project print f27">
+        <input type="checkbox" id="p27">
+        <label class="card" for="p27" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/22_insecte_1.png"
+            alt="Poster de mise en valeur des polynéoptères.">
+          <span class="info"><strong>Mue·tation</strong>Décembre 2022.</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/22_insecte_2.png"
+            alt="Maquette pour un puzzle éditorial.">
+        </div>
+        <div class="card extra text">
+          <h2 class="t-title">Mue·tation</h2>
+          <p class="t-meta">Décembre 2022.</p>
+          <p>Travail d'éditions et de créations d'une ligne éditoriale autour des Précieux Insectes ! 
+            <br><br> 
+            Les insectes ont cette part de mystère qui nous effraie, mais si nous apprenons à l’apprivoiser, à l’accepter alors ce même mystère devient source de beauté. Le projet se constitue d’un poster à l’apparence morcelée et d’un livret présentant succinctement la famille, ses caractéristiques et son importance dans notre environnement. Au fil de la lecture, de la découverte du coffret, des morceaux du poster sont retrouvés, c’est au lecteur de les rassembler pour composer ce paysage temporaire. Il doit ainsi agir pour recréer un environnement fragile à l’image de notre biodiversité.</p>
+        </div>
+      </div>
+
+      <div class="project print f28">
+        <input type="checkbox" id="p31">
+        <label class="card" for="p31" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/22_tdc_1.png" alt="Poster recto.">
+          <span class="info"><strong>TDC</strong>Décembre 2022</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/22_tdc_2.png"
+            alt="Poster verso."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/22_tdc_3.png"
+            alt="Tests et bugs."></div>
+        <div class="card extra text">
+          <h2 class="t-title">TDC</h2>
+          <p class="t-meta">2022</p>
+          <p>Créé en 1946, TDC est une communauté mondiale unie par la conviction que la typographie détermine la
+            culture et que la culture détermine la typographie. <br>
+            Je voulais faire écho aux enjeux actuels qui interrogent les métiers concernés par ce concours: <span
+              class="o o1"> la numérisation est-elle la perte d’un savoir-faire ou la création d’un nouveau ?
+            </span>Comment faire cohabiter ces deux pratiques ? <br><br>
+
+            Pour illustrer cette cohabitation et ne pas imposer de choix déterminé, j'ai choisi de réaliser un poster
+            entièrement réversible, se jouant de la symétrie des chiffres «6» et «9». <br><br> Deux chiffres
+            s'entrelacent, l'un dessiné à la main, l'autre, son miroir, est passé dans un script qui l'a transformé en
+            un amoncellement de l’acronyme TDC.
+          </p>
+        </div>
+      </div>
+
+      <div class="project print f29">
+        <input type="checkbox" id="p28">
+        <label class="card" for="p28" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/23_typo_mazette_1.png" alt="Recto du spécimen.">
+          <span class="info"><strong>EYE AÏE EYE</strong>Typographie et spécimen. Février 2023</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/23_typo_mazette_2.png"
+            alt="Verso du spécimen.">
+        </div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/23_typo_mazette_3.png"
+            alt="Spécimen ouvert."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/23_typo_mazette_4.png"
+            alt="Captures d'écrans du projet sur le logiciel Glyphs.">
+        </div>
+        <div class="card extra text">
+          <h2 class="t-title">EYE AÏE EYE</h2>
+          <p class="t-meta">2023</p>
+          <p> Inspirée par le logotype de «Mazzeti», chocolatier suisse datant de 1911, j’ai proposé la reconstitution
+            d’une typographie complète, constituée de deux graisses distinctes.
+            <br><br>
+            Malgré l’ancienneté du logotype, le manque d’empattement, de pleins et de déliés confère à ma police de
+            caractère un aspect résolument moderne.
+            <br> <br>
+            L’œil naturellement haut du logotype m’a inspirée, et j’ai choisi de mettre en valeur cette caractéristique
+            à travers le format allongé du spécimen.
+            <br> <span class="o o1">
+              L'œil est devenu central dans le spécimen, multipliant les références avec un renvoi à l’expression:
+              «the eye of the needle» en couverture, ou bien la présentation de l’entièreté de la police de caractère
+              sous forme d’échelle d’acuité visuelle</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="project print f30">
+        <input type="checkbox" id="p29">
+        <label class="card" for="p29" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/23_bde_1.png"
+            alt="Collage personnel sur le thème de l'évasion.">
+          <span class="info"><strong>Le préau</strong>2023-24</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/23_bde_5.png "
+            alt="Toutes les participations au concours étudiant et l'enveloppe qui les contenait. Quoi de mieux qu'une lettre pour nous rappeler le voyage ?">
+        </div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/23_bde_7.png"
+            alt="J'adore la risographie, mais quand il y a une galère d'impression on croise les doigts."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/23_bde_8.png"
+            alt="Ça a marché !"></div>
+
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/23_bde_6.png"
+            alt="Carte postale locale aux couleurs de l'école !"></div>
+        <!--<div class="card extra"><img loading="lazy" decoding="async" src="source/projects/23_bde_6.gif" alt=""></div>-->
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/23_bde_4.png"
+            alt="Le journal et son sommaire."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/23_bde_2.png"
+            alt="Parlons d'évasion."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/23_bde_3.png"
+            alt="Échappez-vous ! Bisous."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Le préau</h2>
+          <p class="t-meta">2023-24</p>
+          <p>Participation au BDE de l'ELMAD Auguste Renoir. Pause sur un projet particulier, la réalisation d'un
+            fanzine <span class="o">pour les étudiant·es et par les étudiant·es</span> sur le thème de l'évasion. Voici
+            cette création collective résumée en quelques images. Direction artistique, ligne éditoriale, travail
+            collectif, exposition étudiante et impression en risographie.
+          </p>
+        </div>
+      </div>
+
+      <div class="project print f31">
+        <input type="checkbox" id="p30">
+        <label class="card" for="p30" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/22_eye_1.png"
+            alt="Zoom sur le collage in situ, Chaumont, été 2023.">
+          <span class="info"><strong>WIP</strong>Mai 2023</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/22_eye_2.png"
+            alt="Photo de l'exposition, Chaumont, été 2023."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/22_eye_4.png"
+            alt="Poster initialement proposé lors de l'appel à candidature."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/22_eye_5.png"
+            alt="Photo de l'exposition, Chaumont, été 2023."></div>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/22_eye_6.png"
+            alt="Installation en cours."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Work In progress...</h2>
+          <p class="t-meta">Mai 2023</p>
+          <p>
+            Le concours étudiant international organisé par Le Signe, dans le cadre de la 4e biennale de design
+            graphique de Chaumont, était introduit de cette manière:
+            « Une seule question sur toutes les lèvres "Who are you?". Autrement dit "T KI?". <br>
+            Jury constitué de : Marine Benz, Nina Paim et Bruno Souêtre
+            <br><br>
+            Depuis deux ans je collectionne les affiches de métro et je rassemble les regards que j'y trouve en un
+            collage qui envahit peu à peu les murs de ma chambre. Alors pour répondre à cette question j'en ai
+            photographié des extraits et j'ai écrit, réalisant ainsi trois affiches. <br>
+            Parmi les 141 propositions, j’ai eu la chance de faire partie des 28 projets sélectionnés.
+            Et puisque c'est la démarche qui a le plus intéressé Bruno Souêtre (aussi scénographe de l’exposition), j'ai
+            sorti le collage du cadre intime de ma chambre pour recomposer in situ cette histoire en perpétuelle
+            construction. <br><br>
+            <span class="o o2">
+              WHO ARE YOU? <br><br>
+
+              Je suis une femme. <br>
+              Je suis une étudiante. <br>
+              Je suis une enfant. <br>
+              Je suis une adulte. <br>
+              Je suis féminine.<br>
+              Je suis masculine.<br>
+              Je suis à l’écoute.<br>
+              Je suis perdue dans mes pensées.<br>
+              Je suis une artiste.<br>
+              Je suis une graphiste.<br>
+              Je suis une photographe.<br><br>
+
+              Je suis en recherche de ma place,<br>
+              de mon identité,<br>
+              de ce que j’aime.<br>
+              J’aime les regards des gens.<br>
+              On m’a dit que les yeux sont les fenêtres de l’âme.<br>
+              J’ai tellement de questions à leur poser<br>
+              que je les observe, les étudie,<br>
+              mais rien n’y fait,<br>
+              Ce ne sont pas des lèvres<br>
+              qui me chuchoteraient leur secret.<br>
+              Alors je reste sans réponse.<br><br>
+
+              J’aime aussi traverser au feu rouge.<br>
+              J’aime marcher au milieu de la rue<br>
+              quand les voitures ont disparu.<br>
+              J’aime garder les sachets de sucre<br>
+              qui accompagnent mon café,<br>
+              et j’aime récupérer les morceaux<br>
+              d’affiches déchirées.<br>
+              Tous ces micro-délits me rappellent<br>
+              que je suis qui je suis.<br>
+              Ces petites actions futiles<br>
+              qui me disent que je suis bien en vie !<br>
+              Ces petits moments de liberté<br>
+              qui permettent d’oublier que la journée<br>
+              est la même qu’hier.<br><br>
+
+              Alors comme une preuve de mon individualité,<br>
+              j’ai commencé à collectionner tous ces regards croisés,<br>
+              ces morceaux d’histoires,<br>
+              ces bouts de papier que je collecte.<br>
+              En les rassemblant,<br>
+              ce ne sont plus leurs histoires<br>
+              qu’ils racontent, mais la mienne.<br>
+              Et les jours ne se répètent plus,<br>
+              car j’ai maintenant la preuve que mon monde s’enrichit.<br>
+              Cette œuvre est la matérialisation de ma quête.<br>
+              Elle ne m’offre pas de réponse,<br>
+              mais me montre qui je suis et qui je deviens.<br><br>
+
+              Alors, qui suis-je ?<br>
+              Je suis la somme de tous ceux que je rencontre.<br><br>
+
+              Je suis en construction. <br>
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="project print f32">
+        <input type="checkbox" id="p33">
+        <label class="card" for="p33" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/23_run_1.png" alt="Couverture du jeu vidéo.">
+          <span class="info"><strong>Endless Runner</strong>2023</span>
+        </label>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/23_run_2.png"
+            alt="Capture d'écran de la création du jeu vidéo."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/23_run_3.png"
+            alt="Capture d'écran de la création du jeu vidéo."></div>
+        <div class="card extra text">
+          <h2 class="t-title">Endless Runner</h2>
+          <p class="t-meta">Mai 23</p>
+          <p>À l'occasion de la 4e biennale de design graphique organisée par <a
+              href="https://www.centrenationaldugraphisme.fr/evenements/session-de-workshops-biennale-2023">Le
+              Signe</a>, une série de workshops a vu le jour sous le nom de "formes de collaboration". Dans le workshop
+            "What are you running For?" de <a href="https://rouxcoucou.fr/">Guillaume Roux</a> on questionne notre
+            pratique en tant que jeunes graphistes en créant un <span class="o o3">Endless Runners</span>. <br> <br>
+            Projet réalisé avec Stella GRIMBERT, Yoann JAECK, Nahia SARATXU <br> <br>
+            En quatre jours, nous avons dû découvrir le Game Design, le logiciel et la 3D mais aussi nous demander ce
+            que nous avons en commun, nous qui venons d'endroits si différents. Tous ces défis nous ont poussés à nous
+            reposer sur notre intuition, et définir notre culture visuelle commune. <br> <br> Le résultat est abstrait,
+            pourtant intemporel, presque universel. <span class="o o1">Alors pourquoi courons-nous ? Parce qu'on est
+              pressé de s'amuser, de découvrir...</span></p>
+        </div>
+      </div>
+
+      <div class="project print f33">
+        <input type="checkbox" id="p32">
+        <label class="card" for="p32" tabindex="0" role="button" aria-expanded="false">
+          <img loading="lazy" decoding="async" src="source/projects/22_pdc_1.png"
+            alt="Une des impressions sur papier dos bleu réutilisé.">
+          <span class="info"><strong>PDC</strong>2026</span>
+        </label>
+        <div class="card wide extra"><img loading="lazy" decoding="async" src="source/projects/22_pdc_2.png"
+            alt="Quantité de photos réalisées et préparations avant impressions."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/22_pdc_3.png"
+            alt="Accrochage en cours sur l'objet d'étude."></div>
+        <div class="card extra"><img loading="lazy" decoding="async" src="source/projects/22_pdc_pan0.gif"
+            alt="Gif regroupant l'entièreté de la collection."></div>
+        <div class="card extra text">
+          <h2 class="t-title">PDC</h2>
+          <p class="t-meta">2022-23</p>
+          <p><span class="o o1">Impressions de 365 photos</span> d'un panneau d'affichage sauvage à <span class="o o3">
+              Place de Clichy</span>, sur des morceaux de papier dos bleu utilisé pour l’impression de posters. Photo
+            prise quotidiennement, ce reportage devient témoin des événements de trois ans d'études et de routine.</p>
+        </div>
+      </div>
+
     </div>
+  </main>
 
-    <div class="index">
+  <!-- Panneau « À propos » 
+     Mots colorés : <span class="c1">mot</span>  (c1 = violet, c2 = rouge, c3 = orange -->
+  <aside class="about" id="about" aria-label="À propos" aria-hidden="true">
+    <div class="about-inner">
 
-       <!--??.Tracts de crise
-       <a class="card-project" href="/source/projects/2022_23/Sérigraphie/VoyageDuFutur.html" >
-        <img class="card-image first" src="/source/projects/2023_24/2309_TRACTSdeCRISES/mini_tract.png" alt="Tracts de crise">
-        <img class="card-image second" src="/source/projects/2023_24/2309_TRACTSdeCRISES/mini_Tract0.png" alt="Tracts de crise">
-      </a>
-      
-      <!--??.RAME
-      <a class="card-project" href="/source/projects/2022_23/Sérigraphie/VoyageDuFutur.html" >
-        <img class="card-image first" src="/source/projects/2023_24/2401_RAME/mini_rAME2.png" alt="RAME">
-        <img class="card-image second" src="/source/projects/2023_24/2401_RAME/mini_rame.png" alt="RAME">
-      </a>
-      -->
 
-      <!--searching an internship-->
-      <a class="portfolio" href="source/autre/dumesny_angele_portfolio_2026.pdf" >
-        <p style="color:black; font: size 20px; text-align:right; margin-right: 0px; ;"> <br> <br> <br> &puncsp;&puncsp; Here's my portfolio &downarrow; 
-            <br> &puncsp;···  </p>
-      </a> 
+      <h2><span class="c2">Angèle Dumesny</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
 
-      <!--15.Zlabia-->
-      <a class="card-project" href="/source/projects/2022_23/EndlessRunner/EndlessRunner.html" >
-        <img class="card-image first" src="/source/projects/2022_23/EndlessRunner/mini_Zlabia2.jpg" alt="Endless Runner">
-        <img class="card-image second" src="/source/projects/2022_23/EndlessRunner/mini_Zlabia.jpg" alt="Endless Runner">
-      </a>
+      <p class="a-kicker"><span class="c3">aka
+          DUMULUS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </p>
 
-      <!--14.WIP-->
-      <a class="card-project" href="/source/projects/2022_23/WIP/WIP.html" >
-        <img class="card-image first" src="/source/projects/2022_23/WIP/mini_WIP2.png" alt="WIP">
-        <img class="card-image second" src="/source/projects/2022_23/WIP/mini_WIP.png" alt="WIP">
-      </a>
+      <p class="a-lead"> <span class="c1">&nbsp;Graphiste pluridisciplinaire</span>.</p>
 
-      <b></b>
+      <h3><span class="o o3">PARIS · BRUXELLES ·
+          NANTES</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
 
-      <!--??.EYE AIE EYE-->
-      <a class="card-project" href="/source/projects/2022_23/eyefont/eyefont.html" >
-        <img class="card-image first" src="/source/projects/2022_23/eyefont/mini_eye.png" alt="EYE AIE EYE">
-        <img class="card-image second" src="/source/projects/2022_23/eyefont/mini_eye2.png" alt="EYE AIE EYE">
-      </a>
-      
-      <!--??.TDC-->
-      <a class="card-project" href="/source/projects/2022_23/tdc/tdc.html" >
-        <img class="card-image first" src="/source/projects/2022_23/tdc/mini_TDC3.png" alt="Type director CLUB">
-        <img class="card-image second" src="/source/projects/2022_23/tdc/mini_TDC.png" alt="Type director CLUB">
-      </a>
-      
-      <b></b>
+      <p class="a-tagline"> <span class="o"> Expérimenter, Jouer &amp; Créer Ensemble.</span></p>
 
-      <!--13.Voyage du futur-->
-      <a class="card-project" href="/source/projects/2022_23/Sérigraphie/VoyageDuFutur.html" >
-        <img class="card-image first" src="/source/projects/2022_23/Sérigraphie/mini_ser2.png" alt="mue tation">
-        <img class="card-image second" src="/source/projects/2022_23/Sérigraphie/mini_ser1.png" alt="toh">
-      </a>
+      <br>
 
-      <b></b>
 
-      <!--11.insecte-->
-      <a class="card-project" href="/source/projects/2022_23/insecte/insecte.html" >
-            <img class="card-image first" src="/source/projects/2022_23/insecte/mini_insecte2.png" alt="mue tation">
-            <img class="card-image second" src="/source/projects/2022_23/insecte/mini_insecte.jpg" alt="toh">
-      </a>
+      <p> 
+        <em>Je suis graphiste, chercheuse, développeuse web, scénographe,
+          artiste et médiatrice. <br> Je suis aussi une bidouilleuse-collectionneuse de mots, de logiciels et d’outils. </em>
+      </p>
+      <br>
 
-      <!--9.toh-->
-      <a class="card-project" href="/source/projects/2021_22/toh/toh.html" >
-        <img class="card-image first" src="/source/projects/2021_22/toh/mini_toha.jpg" alt="toh">
-        <img class="card-image second" src="/source/projects/2021_22/toh/mini_toh.jpg" alt="toh">
-      </a>
+      <p>
+        Diplômée du DSAA <a href="http://memoires.ecole-estienne.net/dcn/index.html" target="_blank" rel="noopener"><em>
+            DCN </em></a> de l'école <a
+          href="https://www.ecole-estienne.paris/formation/dsaa-design-et-creation-en-environement-numerique/presentation/"
+          target="_blank" rel="noopener"><span class="o"> Estienne</span></a> en 2026.
+
+        J’aime et je développe des pratiques hybrides et collectives.<br>
+        Je fais partie d'<a href="https://atelierludd.github.io" target="_blank" rel="noopener" class="ext"><span
+            class="o">Atelier LUDD</span></a><br>
+        <!--De la collective <a href="none" target="_blank" rel="noopener" class="ext"><em>Trobaïritz</em></a><br>
+      Et je développe une pratique expérimentale avec <a href="https://angeledumesny.github.io" target="_blank" rel="noopener" class="ext"><strong>Dumulus</strong></a>.-->
+      </p>
+
+      <br>
+
+
+      <div class="a-contact">
+        <div class="a-buttons">
+          <a class="pill" href="source/candidature/DUMESNY_ANGÈLE_CV_2026.pdf" target="_blank" rel="noopener">CV</a>
+          <a class="pill" href="source/candidature/DUMESNY_ANGÈLE_PORTFOLIO_2026.pdf.pdf" target="_blank"
+            rel="noopener">Portfolio</a>
+        </div>
+
+        <p class="a-lead"> Pour papoter et faire ensemble&#8239;: <a href="mailto:angeledumesny@gmail.com"
+            target="_blank" rel="noopener"><strong>angeledumesny[@]gmail.com</strong></a> </p>
+
+        <div class="about-foot">
+          <span class="a-small"><a href="#" id="credits-open" aria-haspopup="dialog"><strong>Crédits</strong></a></span>
+          <span class="a-small">2026</span>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Fenêtre « Crédits » : s'ouvre depuis le lien Crédits du panneau À propos -->
+  <div class="credits" id="credits" role="dialog" aria-modal="true" aria-label="Crédits" aria-hidden="true">
+    <div class="credits-sheet">
+      <button class="credits-close" aria-label="Fermer">×</button>
+      <div class="credits-body">
+
+        <!-- « Merci » : le dy décale chaque lettre vers le bas (escalier). Change les chiffres pour changer la pente. -->
+        <svg class="merci" viewBox="0 0 600 240" role="img" aria-label="Merci">
+          <text x="20" y="125" dy="0 22 22 22 22" textLength="540" lengthAdjust="spacing">Merci</text>
+        </svg>
+
+        <h3>Typographies</h3>
+        <p class="c-fonts">
+          <span style="font-family:'Banana Outline', serif">Banana Outline Light</span>
+          <span style="font-family:'BBB Herthey Futural', serif">BBB Herthey Futural</span>
+          <span style="font-family:'BBB Manifont Grotesk', serif">BBB Manifont Grotesk</span>
+          <span style="font-family:'Feroniapi', serif">Feroniapi</span>
+          <span style="font-family:'Garabosse Gaillarde', serif">Garabosse</span>
+          <span style="font-family:'Garamondt', serif">Garamondt</span>
+          <span style="font-family:'Interlope', serif">Interlope</span>
+          <span style="font-family:'Junicode', serif">Junicode</span>
+          <span style="font-family:'Latitude', serif">Latitude</span>
+          <span style="font-family:'Linux Libertine aBL', serif">Linux Libertine</span>
+          <span style="font-family:'Nudles', serif">Nudles</span>
+          <span style="font-family:'Peille', serif">Peille</span>
+          <span style="font-family:'Tribalium Neue', serif">Tribalium Neue</span>
+          <span style="font-family:'Wavy', serif">Wavy</span>
+        </p>
+
+        <h3>aller voir les copains : </h3>
+        <div>
+          <a href="https://www.picquendar.art/">Elysa Picquendard</a> <br>
+          <a href="https://www.instagram.com/antipykal/">Lucie Pensivy</a> <br>
+          <a href="https://manondebray.github.io/">Manon Debray</a> <br>
+          <a href="https://www.instagram.com/ornellaaab/">Ornella Anthony</a> <br>
+          <a href="https://yann-morel.github.io/">Yann Morel</a> <br>
+        </div>
+
+      </div>
     </div>
   </div>
+
+  <!-- Galerie : agrandissement des images -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie">
+    <button class="lb-btn lb-close" aria-label="Fermer">×</button>
+    <button class="lb-btn lb-prev" aria-label="Image précédente">‹</button>
+    <figure><img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" aria-label="Image suivante">›</button>
+  </div>
 </body>
+
 </html>
-
-
-
-
-
-<img class="" src="" alt="">

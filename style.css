@@ -1,0 +1,541 @@
+/* =====================================================================
+   STYLE.CSS — GRAPHIC / Dumulus
+   1. Polices (dossier source/fonts/)
+   2. Variables & base (les polices d'interface se règlent ici)
+   3. En-tête, menu & boutons du haut (À propos, XP)
+   4. Filtres (Print / Web / Ludd / Other)
+   5. Grille & cartes
+   6. Projet ouvert : assombrissement des autres
+   7. Cases de texte (une police différente par projet)
+   8. Outline sur n'importe quel mot
+   9. Galerie (lightbox)
+   10. Panneau « À propos » (feuille blanche qui glisse)
+   11. Fenêtre « Crédits »
+   12. Page XP (xp.html)
+   13. Responsive
+   ===================================================================== */
+
+
+/* ---------- 1. POLICES ----------
+   Chemins relatifs à style.css. Si tu déplaces style.css dans un sous-dossier
+   (ex. css/), remplace « source/fonts/ » par « ../source/fonts/ ».            */
+@font-face { font-family: 'Banana Outline'; src: url('source/fonts/Banana-Outline-Light.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'BBB Herthey Futural'; src: url('source/fonts/BBB-Herthey-Futural-95.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'BBB Manifont Grotesk'; src: url('source/fonts/BBBManifontGrotesk-BookItalic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Feroniapi'; src: url('source/fonts/Feroniapi-MediumItalic.otf') format('opentype'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Garabosse Gaillarde'; src: url('source/fonts/Garabosse-Gaillard%C2%B7e.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Garabosse Mignonne'; src: url('source/fonts/Garabosse-Mignon%C2%B7ne.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Garabosse Nonpareille'; src: url('source/fonts/Garabosse-Nonpareil%C2%B7le.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Garabosse Parangon'; src: url('source/fonts/Garabosse-Parangon.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Garabosse Perle'; src: url('source/fonts/Garabosse-Perle.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Garamondt'; src: url('source/fonts/Garamondt-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Garamondt'; src: url('source/fonts/Garamondt-Italic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Interlope'; src: url('source/fonts/Interlope-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Junicode'; src: url('source/fonts/Junicode-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Junicode'; src: url('source/fonts/Junicode-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Junicode'; src: url('source/fonts/Junicode-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Junicode'; src: url('source/fonts/Junicode-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Junicode Condensed'; src: url('source/fonts/Junicode-RegularCondensed.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Junicode Condensed'; src: url('source/fonts/Junicode-ItalicCondensed.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Junicode Condensed'; src: url('source/fonts/Junicode-BoldCondensed.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Junicode Condensed'; src: url('source/fonts/Junicode-BoldItalicCondensed.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Latitude'; src: url('source/fonts/Latitude-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Linux Libertine aBL'; src: url('source/fonts/LinLibertine_aBL.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Linux Libertine I'; src: url('source/fonts/LinLibertine_I.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Linux Libertine RZI'; src: url('source/fonts/LinLibertine_RZI.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Nudles'; src: url('source/fonts/Nudles-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Peille'; src: url('source/fonts/Peille-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Tribalium Neue'; src: url('source/fonts/TribaliumNeue-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Wavy'; src: url('source/fonts/wavy.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+
+/* Wavy (police du « Merci » des crédits).*/
+@font-face { font-family: 'Wavy'; src: url('source/fonts/wavy.otf') format('opentype'), url('source/fonts/wavy.otf') format('opentype'), url('source/fonts/wavy.otf') format('truetype'), url('source/fonts/wavy.otf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+
+
+/* ---------- 2. VARIABLES & BASE ---------- */
+:root {
+  --gap: 14.7px; --pad: 20px; --ink: #fff;
+
+  /* couleurs des mots colorés (classes .c1 .c2 .c3) — .c3 (orange) sert aussi au
+     survol des boutons CV / Portfolio.  Change une valeur ici : elle change partout. */
+  --c1: #7a2cff;   /* violet */
+  --c2: #ff2438;   /* rouge  */
+  --c3: #ff8a00;   /* orange */
+
+  /* ombre portée du panneau À propos (une seule) : noire pour l'instant, change la couleur ici */
+  --shadow-color: #000;
+
+  /* fenêtre Crédits */
+  --credits-dim:    rgba(0, 0, 0, .72);   /* assombrissement du reste du site */
+  --credits-shadow-a: #3d6bff;            /* ombre portée bleue    */
+  --credits-shadow-b: #8a2cff;            /* ombre portée violette */
+  --credits-glow-a: #2f6bff;              /* lueur interne bleue        */
+  --credits-glow-b: #9b3cff;              /* lueur interne violette     */
+  --merci-color:    #000;                 /* couleur du « Merci » pointillé */
+
+  /* boutons de droite (svg rangés dans source/site/) */
+  --about-h: 44px;                  /* hauteur du bouton À propos */
+  --xp-h: 26px;                     /* hauteur du bouton XP */
+  --xp-cursor: 48px;                /* taille du curseur (bouton noir XP) sur la page XP */
+
+  /* curseur = le chevron du favicon (pointe = point de clic) */
+  --cursor: url('source/site/cursor.png') 8 16, auto;
+
+  /* polices d'interface : change simplement les noms ici */
+  --f-base:    'Latitude';               /* texte par défaut */
+  --f-site:    'Garabosse Parangon';     /* titre « Dumulus » */
+  --f-print:   'Tribalium Neue';         /* menu : Print */
+  --f-web:     'Nudles';                 /* menu : Web */
+  --f-ludd:    'Interlope';              /* menu : Ludd */
+  --f-pill:    'BBB Herthey Futural';    /* boutons CV / Portfolio */
+  --f-back:    'Garamondt';              /* flèches de la page XP (retour, recommencer) */
+  --f-credits: 'Wavy';                   /* « Merci » des crédits */
+  --f-caption: 'Garabosse Mignonne';     /* légendes de la galerie */
+  --f-arrows:  'Feroniapi';              /* flèches de la galerie */
+
+  /* valeurs par défaut des cases de texte (écrasées par .f01, .f02 … plus bas) */
+  --ft: 'Junicode'; --fb: 'Junicode'; --tw: 400; --ts: normal;
+}
+* { box-sizing: border-box; cursor: var(--cursor); }   /* curseur partout, liens et boutons compris */
+.c1 { color: var(--c1); } .c2 { color: var(--c2); } .c3 { color: var(--c3); }
+/* empêche le navigateur de "recaler" le scroll tout seul quand un projet s'ouvre/ferme */
+html { overflow-anchor: none; }
+html, body { margin: 0; background: #000; color: #fff; font-family: var(--f-base), 'Junicode', serif; }
+body { padding: var(--pad); }
+body.no-scroll { overflow: hidden; }
+
+
+/* ---------- 3. EN-TÊTE, MENU & BOUTONS DU HAUT (À PROPOS, XP) ---------- */
+header { margin-bottom: 28px; }
+h1 {
+  margin: 0 0 12px; font: 400 30px/1.1 var(--f-site), 'Junicode', serif; letter-spacing: .02em;
+  transition: opacity .35s, visibility 0s;
+}
+/* À propos ouvert : le nom disparaît de la page (il est déjà dans le panneau) */
+body.about-open h1 { opacity: 0; visibility: hidden; transition: opacity .35s, visibility 0s .35s; }
+h1 a { color: inherit; text-decoration: none; }
+h1 a:hover { font-family: 'Garamondt', 'Junicode', serif; font-style: italic; }
+nav { display: flex; gap: 22px; }
+nav a {
+  color: #888; text-decoration: none; text-transform: uppercase; font-size: 16px;
+  font-family: var(--f-base), 'Junicode', serif;
+}
+nav a:hover { color: #fff; }
+/* une police différente par entrée de menu */
+nav a[href="#print"] { font-family: var(--f-print), 'Junicode', serif; }
+nav a[href="#web"]   { font-family: var(--f-web),   'Junicode', serif; }
+nav a[href="#ludd"]  { font-family: var(--f-ludd),  'Junicode', serif; }
+
+/* boutons fixes en haut à droite : uniquement des svg (source/site/).
+   À propos : bouton_blanc.svg avec l'effet "difference" sur les images ; au survol, son équivalent
+              bouton_noir.svg. Ouvert : bouton_noir.svg sur la feuille blanche (au survol, l'inverse).
+   XP       : bouton_xp_noir.svg ; au survol bouton_xp_blanc.svg. Il disparaît quand À propos est ouvert. */
+.about-btn, .xp-btn { position: fixed; z-index: 95; display: block; padding: 0; border: 0; background: none; line-height: 0; }
+.about-btn { top: var(--pad); right: var(--pad); mix-blend-mode: difference; }
+.about-btn[aria-expanded="true"] { mix-blend-mode: normal; }
+.about-btn img { display: block; height: var(--about-h); width: auto; }
+/* XP : à gauche du bouton À propos (--about-w = sa largeur, mesurée par script.js), centré sur lui */
+.xp-btn {
+  top: calc(var(--pad) + (var(--about-h) - var(--xp-h)) / 2);
+  right: calc(var(--pad) + var(--about-w, 44px) + 12px);
+  transition: opacity .3s, visibility 0s;
+}
+.xp-btn img { display: block; height: var(--xp-h); width: auto; }
+body.about-open .xp-btn { opacity: 0; visibility: hidden; transition: opacity .3s, visibility 0s .3s; }
+
+.about-btn .b-open, .xp-btn .x-hover { display: none; }
+.about-btn[aria-expanded="true"] .b-closed { display: none; }
+.about-btn[aria-expanded="true"] .b-open { display: block; }
+/* survol (souris uniquement) : l'équivalent de chaque bouton */
+@media (hover: hover) {
+  .about-btn:hover .b-closed, .xp-btn:hover .x-rest { display: none; }
+  .about-btn:hover .b-open, .xp-btn:hover .x-hover { display: block; }
+  .about-btn[aria-expanded="true"]:hover .b-open { display: none; }
+  .about-btn[aria-expanded="true"]:hover .b-closed { display: block; }
+}
+
+
+/* ---------- 4. FILTRES (Print / Web / Ludd) ---------- */
+.anchor { position: absolute; top: 0; }
+#print:target ~ header a[href="#print"],
+#web:target   ~ header a[href="#web"],
+#ludd:target  ~ header a[href="#ludd"] { color: #fff; text-decoration: underline; }
+#print:target ~ .wrap .project:not(.print),
+#web:target   ~ .wrap .project:not(.web),
+#ludd:target  ~ .wrap .project:not(.ludd) { display: none; }
+
+
+/* ---------- 5. GRILLE & CARTES ---------- */
+.wrap { container-type: inline-size; }
+.grid {
+  --cols: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: var(--gap);
+  /* hauteur de ligne = hauteur d'une case "normal" (ratio 748.11 x 1057.94) */
+  grid-auto-rows: calc((100cqw - (var(--cols) - 1) * var(--gap)) / var(--cols) * 1.41421);
+}
+@media (min-width: 1100px) { .grid { --cols: 6; } }
+
+.project { display: contents; }
+/* case à cocher masquée : elle ne sert que de mémoire d'état (ouvert / fermé).
+   Le clic est géré dans script.js sur la couverture, qui est focalisable au clavier. */
+.project > input { display: none; }
+
+.card {
+  position: relative; display: block; overflow: hidden;
+  background: #111; outline: 0px solid #222;
+  height: 100%;
+  transition: filter .35s ease;
+}
+.card.wide { grid-column: span 2; }
+.card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* survol : infos du projet (police de titre + police de texte propres au projet) */
+.card .info {
+  --ink: #fff;
+  position: absolute; inset: 0; padding: 14px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  background: rgba(1, 1, 1, 0.8); color: #fff;
+  font: 14px/1.35 var(--fb), 'Junicode', serif;
+  opacity: 0; transition: opacity .1s;
+}
+.card:hover .info { opacity: 1; }
+.info strong {
+  display: block; margin-bottom: 5px; text-transform: uppercase;
+  font: var(--ts) var(--tw) 20px/1.05 var(--ft), 'Junicode', serif;
+}
+
+/* cases dépliées */
+.extra { display: none; }
+.project > input:checked ~ .extra { display: block; }
+.project > input:checked + .card { outline: 1px solid #fff; }
+.project > .card:focus-visible { outline: 2px solid #fff; }
+
+
+
+/* ---------- 6. PROJET OUVERT : LES AUTRES S'ASSOMBRISSENT ----------
+   Le projet "actif" (le dernier ouvert, classe .active posée par script.js) reste
+   lumineux ; TOUT le reste, photos dépliées et textes compris, est assombri.
+   Change --dim pour régler l'intensité (1 = normal, 0 = noir complet).   */
+.grid { --dim: .35; }
+.grid:has(.project.active) .project:not(.active) .card {
+  filter: brightness(var(--dim));
+}
+.grid:has(.project.active) .project:not(.active) .card:hover {
+  filter: brightness(.7);
+}
+
+
+/* ---------- 7. CASES DE TEXTE ----------
+   Les polices (--ft titre, --fb texte, --tw graisse, --ts style) viennent de la
+   classe .fNN portée par chaque projet : voir la liste en bas de cette section.
+   Le même réglage sert au titre du survol sur l'image.                        */
+.card.text {
+  --ink: #000;
+  background: #fefefe; color: #000;
+  /* boîte réduite : 1 colonne, hauteur = celle du texte, centrée sur la ligne d'images */
+  height: auto; max-height: 100%; align-self: center;
+  overflow-y: auto; padding: 14px 16px;
+  font: 12px/1.4 var(--fb), 'Junicode', serif;
+}
+.text .t-title {
+  margin: 0 0 3px; font: var(--ts) var(--tw) 18px/1.05 var(--ft), 'Junicode', serif;
+}
+.text .t-meta {
+  margin: 0 0 10px; font: 10px/1.3 var(--fb), 'Junicode', serif;
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.text p { margin: 0 0 8px; max-width: 62ch; }
+.text em { font-family: inherit; font-style: italic; }
+.text strong { font-weight: 700; }
+.text a {
+  color: #000; text-decoration: none; border-bottom: 1px solid #000;
+  font-family: inherit; font-size: inherit;
+}
+.text a::after { content: " ↗"; }
+.text a:hover { background: #000; color: #b8b8b8; }
+
+/* --- une combinaison de polices par projet (à modifier librement) ---
+   --ft/--tw/--ts = titre (famille / graisse / style)   --fb = texte          */
+.f01 { --ft: 'Garabosse Parangon'; --tw: 400; --ts: normal; --fb: 'Garamondt'; }
+.f02 { --ft: 'Banana Outline'; --tw: 300; --ts: normal; --fb: 'Latitude'; }
+.f03 { --ft: 'BBB Herthey Futural'; --tw: 400; --ts: normal; --fb: 'Linux Libertine aBL'; }
+.f04 { --ft: 'BBB Manifont Grotesk'; --tw: 400; --ts: italic; --fb: 'Junicode'; }
+.f05 { --ft: 'Feroniapi'; --tw: 500; --ts: italic; --fb: 'BBB Manifont Grotesk'; }
+.f06 { --ft: 'Garabosse Gaillarde'; --tw: 400; --ts: normal; --fb: 'Junicode Condensed'; }
+.f07 { --ft: 'Garabosse Mignonne'; --tw: 400; --ts: normal; --fb: 'Peille'; }
+.f08 { --ft: 'Garabosse Nonpareille'; --tw: 400; --ts: normal; --fb: 'Linux Libertine I'; }
+.f09 { --ft: 'Garabosse Perle'; --tw: 400; --ts: normal; --fb: 'Feroniapi'; }
+.f10 { --ft: 'Garamondt'; --tw: 400; --ts: normal; --fb: 'Garabosse Mignonne'; }
+.f11 { --ft: 'Garamondt'; --tw: 400; --ts: italic; --fb: 'Linux Libertine I'; }
+.f12 { --ft: 'Interlope'; --tw: 400; --ts: normal; --fb: 'Latitude'; }
+.f13 { --ft: 'Junicode'; --tw: 400; --ts: normal; --fb: 'Linux Libertine aBL'; }
+.f14 { --ft: 'Junicode'; --tw: 400; --ts: italic; --fb: 'Garamondt'; }
+.f15 { --ft: 'Junicode'; --tw: 700; --ts: normal; --fb: 'BBB Manifont Grotesk'; }
+.f16 { --ft: 'Junicode'; --tw: 700; --ts: italic; --fb: 'Junicode Condensed'; }
+.f17 { --ft: 'Junicode Condensed'; --tw: 400; --ts: normal; --fb: 'Peille'; }
+.f18 { --ft: 'Junicode Condensed'; --tw: 400; --ts: italic; --fb: 'Linux Libertine I'; }
+.f19 { --ft: 'Junicode Condensed'; --tw: 700; --ts: normal; --fb: 'Feroniapi'; }
+.f20 { --ft: 'Junicode Condensed'; --tw: 700; --ts: italic; --fb: 'Garabosse Mignonne'; }
+.f21 { --ft: 'Latitude'; --tw: 400; --ts: normal; --fb: 'Garamondt'; }
+.f22 { --ft: 'Linux Libertine aBL'; --tw: 400; --ts: normal; --fb: 'Latitude'; }
+.f23 { --ft: 'Linux Libertine I'; --tw: 400; --ts: italic; --fb: 'Linux Libertine aBL'; }
+.f24 { --ft: 'Linux Libertine RZI'; --tw: 400; --ts: italic; --fb: 'Junicode'; }
+.f25 { --ft: 'Nudles'; --tw: 400; --ts: normal; --fb: 'BBB Manifont Grotesk'; }
+.f26 { --ft: 'Peille'; --tw: 400; --ts: italic; --fb: 'Junicode Condensed'; }
+.f27 { --ft: 'Tribalium Neue'; --tw: 400; --ts: normal; --fb: 'Peille'; }
+.f28 { --ft: 'Wavy'; --tw: 400; --ts: normal; --fb: 'Linux Libertine I'; }
+.f29 { --ft: 'Garabosse Parangon'; --tw: 400; --ts: normal; --fb: 'Feroniapi'; }
+.f30 { --ft: 'Banana Outline'; --tw: 300; --ts: normal; --fb: 'Garabosse Mignonne'; }
+.f31 { --ft: 'BBB Herthey Futural'; --tw: 400; --ts: normal; --fb: 'Garamondt'; }
+.f32 { --ft: 'BBB Manifont Grotesk'; --tw: 400; --ts: italic; --fb: 'Latitude'; }
+.f33 { --ft: 'Feroniapi'; --tw: 500; --ts: italic; --fb: 'Linux Libertine aBL'; }
+.f34 { --ft: 'Garabosse Gaillarde'; --tw: 400; --ts: normal; --fb: 'Junicode'; }
+
+
+/* ---------- 8. OUTLINE SUR N'IMPORTE QUEL MOT ----------
+   HTML :  <span class="o">mot</span>            trait fin
+           <span class="o o2">mot</span>         trait épais
+           <span class="o o3">mot</span>         trait très épais
+   Le contour prend la couleur --ink (noir dans les cases de texte,
+   blanc ailleurs). Pour une autre couleur :
+           <span class="o" style="--ink:red">mot</span>                       */
+.o {
+  --stroke: 1px;
+  color: transparent;
+  -webkit-text-stroke: var(--stroke) var(--ink);
+  paint-order: stroke fill;
+}
+.o2 { --stroke: 2px; }
+.o3 { --stroke: 2px;}
+
+
+/* ---------- 9. GALERIE (lightbox) ---------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, .94); padding: 4vh 4vw;
+}
+.lightbox.open { display: flex; }
+.lightbox figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.lightbox img { max-width: 92vw; max-height: 86vh; object-fit: contain; display: block; }
+.lightbox figcaption {
+  font: 15px/1.3 var(--f-caption), 'Junicode', serif; color: #999; letter-spacing: .04em;
+}
+.lb-btn {
+  position: absolute; background: none; border: 0; color: #fff;
+  font: 400 46px/1 var(--f-arrows), 'Junicode', serif; padding: 16px; opacity: .7;
+}
+.lb-btn:hover { opacity: 1; }
+.lb-close { top: 4px; right: 10px; }
+.lb-prev  { left: 4px;  top: 50%; transform: translateY(-50%); }
+.lb-next  { right: 4px; top: 50%; transform: translateY(-50%); }
+
+
+/* ---------- 10. PANNEAU « À PROPOS » ----------
+   Feuille blanche pleine hauteur qui glisse depuis la droite et couvre le quart
+   droit de l'écran ; les projets restent visibles et utilisables à gauche.
+   Le bouton À propos ouvre / ferme (Échap ferme aussi).
+   Styles disponibles : .a-kicker · .a-tagline · .a-lead · h2 · h3 · strong · em · liens
+   (.ext = petite flèche ↗) · boutons ovales .pill (dans .a-buttons) · mots colorés
+   .c1 .c2 .c3 · outline .o · .a-small          */
+.about {
+  --ink: #000;
+  position: fixed; top: 0; right: 0; z-index: 90;
+  width: clamp(400px, 25vw, 560px); height: 100vh; height: 100dvh;
+  background: #fff; color: #000; overflow-y: auto; overscroll-behavior: contain;
+  font: 12.5px/1.45 'Junicode', serif;
+  /* ombre portée unique : la couleur se règle avec --shadow-color (en haut du fichier) */
+  box-shadow: -10px 0 46px 4px color-mix(in srgb, var(--shadow-color) 85%, transparent);
+  /* fermé : hors écran (+160px pour que l'ombre ne dépasse pas) */
+  transform: translateX(calc(100% + 160px)); visibility: hidden;
+  transition: transform .6s cubic-bezier(.22, .8, .24, 1), visibility 0s .6s;
+}
+.about.open {
+  transform: none; visibility: visible;
+  transition: transform .6s cubic-bezier(.22, .8, .24, 1), visibility 0s;
+}
+/* le contenu prend toute la hauteur ; les contacts sont poussés en bas */
+.about-inner {
+  min-height: 100%; display: flex; flex-direction: column;
+  padding: 68px 22px 20px;      /* 68px en haut : laisse la place au bouton */
+}
+
+.about p { margin: 0 0 9px;  font: 400 14px/1.3 'Linux Libertine aBL', 'Junicode', serif; }
+.about strong { font-weight: 700; }
+.about em { font: 14px/1 var(--f-caption), 'Garabosse Perle', serif; }
+.about .a-kicker {
+  margin: 0 0 8px; font: 8px/1 var(--f-caption), 'Junicode', serif;
+  text-transform: uppercase; letter-spacing: .12em; text-align: end;
+}
+.about .a-lead { margin-bottom: 14px; font: italic 400 16px/1.3 'Junicode', serif; }
+.about .a-tagline { margin: 0 0 12px; font: italic 400 12px/1.3 'Feroniapi', serif; text-align: end; }
+.about h2 { font: 700 25px/1.2 'Garamondt', serif; text-align: center; }
+.about h3 { margin: 0px 0 4px; font: 700 12px/1.2 'Junicode', serif; text-align: center; }
+.about a {
+  color: #000; text-decoration: none; border-bottom: 1px solid #000;
+  font-family: var(--f-base), 'Junicode', serif;
+}
+.about a:hover { background: #ff02d5; color: #fff; }
+.about a.ext::after { font: 10px 'Wavy', serif; content: "↗"; }
+.about .a-small {
+  font: 10.5px/1.4 var(--f-base), 'Tribalium Neue', serif; color: #3888ff;
+   letter-spacing: .08em;
+}
+
+/* boutons CV / Portfolio : de vrais ovales (ellipses), ferrés à droite, survol orange (--c3).
+   Taille de l'ovale : width / height ci-dessous.                                          */
+.a-buttons { display: flex; justify-content: flex-end; gap: 6px; margin-bottom: 12px; }
+.about a.pill {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 100px; height: 30px; padding: 0;      /* ovale = border-radius 50% sur une boîte plus large que haute */
+  border: 2.5px solid #6600ff; border-radius: 50%;
+  font: 400 11px/1 var(--f-pill), 'Junicode', serif; text-transform: uppercase; letter-spacing: .06em;
+  transition: background .15s, border-color .15s;
+}
+.about a.pill:hover { background: #6600ff; border-color: #6600ff; color: #ffffff; }
+
+/* filets & contacts (en bas du panneau) */
+.a-contact { margin-top: auto; padding-top: 16px; }
+.about-foot { margin-top: 12px; display: flex; justify-content: space-between; gap: 14px; }
+
+
+/* ---------- 11. FENÊTRE « CRÉDITS » ----------
+   S'ouvre depuis le lien Crédits du panneau À propos. Le reste du site s'assombrit ;
+   une feuille blanche centrale (≈ 1/4 de l'écran, marges en haut et en bas) apparaît,
+   avec une ombre portée bleu / violet et une lueur interne bleu / violet.
+   Couleurs : voir les variables --credits-* en haut du fichier.                          */
+.credits {
+  position: fixed; inset: 0; z-index: 110;
+  display: flex; align-items: center; justify-content: center;
+  padding: 13vh 4vw; background: var(--credits-dim);
+  opacity: 0; visibility: hidden;
+  transition: opacity .35s ease, visibility 0s .35s;
+}
+.credits.open { opacity: 1; visibility: visible; transition: opacity .35s ease; }
+
+.credits-sheet {
+  --ink: #000;
+  position: relative; width: clamp(300px, 30vw, 620px); height: 100%; max-height: 780px;
+  background: #fff; color: #000;
+  box-shadow:
+    0 10px 40px 4px color-mix(in srgb, var(--credits-shadow-a) 85%, transparent),
+    0 22px 90px 10px color-mix(in srgb, var(--credits-shadow-b) 75%, transparent);
+  transform: translateY(18px) scale(.97);
+  transition: transform .5s cubic-bezier(.22, .8, .24, 1);
+}
+.credits.open .credits-sheet { transform: none; }
+/* lueur interne : bleu près du bord, violet plus loin = dégradé */
+.credits-sheet::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  box-shadow:
+    inset 0 0 26px 2px var(--credits-glow-a),
+    inset 0 0 90px 8px color-mix(in srgb, var(--credits-glow-b) 75%, transparent);
+}
+.credits-close {
+  position: absolute; top: 4px; right: 8px; z-index: 2;
+  background: none; border: 0; color: #000; padding: 8px; opacity: .7;
+  font: 400 34px/1 var(--f-arrows), 'Junicode', serif;
+}
+.credits-close:hover { opacity: 1; }
+.credits-body {
+  position: relative; z-index: 1; height: 100%; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain;
+  padding: 34px 28px 22px; font: 14px/1.4 'Linux Libertine aBL', 'Junicode', serif;
+}
+
+/* « Merci » : svg pour pouvoir faire un contour pointillé ; lettres décalées en escalier
+   (attribut dy dans le HTML). Épaisseur / pointillé : stroke-width et stroke-dasharray. */
+.merci { display: block; width: 100%; height: auto; overflow: visible; margin: 0 0 8px; }
+.merci text {
+  font: 400 150px/1 var(--f-credits), 'Banana Outline', 'Junicode', serif;
+  fill: none; stroke: var(--merci-color);
+  stroke-width: 9; stroke-dasharray: 0.01 15; stroke-linecap: round; stroke-linejoin: round;
+}
+
+.credits h3 { margin: 18px 0 8px; font: 700 14px/1.2 'Junicode', serif; text-transform: uppercase; letter-spacing: .1em; }
+.credits a { color: inherit; text-decoration: none; }
+.credits a:hover { background: #000; color: #fff; }
+
+/* polices utilisées : chaque nom dans sa police, sans rien d'autre */
+.c-fonts { margin: 0; font-size: 20px; line-height: 1.4; }
+.c-fonts span { display: inline-block; white-space: nowrap; margin-right: 12px; }
+
+
+/* ---------- 12. PAGE XP (xp.html) ----------
+   Fond blanc, pas de scroll. Un clic pose une image du dossier source/xp/ à l'endroit du clic,
+   telle quelle (ni recadrage, ni couleur). Survol d'une image : flou + couleurs inversées.
+   Mix (en haut à droite) : toutes les images changent de place. ↻ : on recommence à zéro.
+   Curseur : le bouton noir XP, suivi par xp.js.                                              */
+html:has(body.xp), body.xp { background: #fff; color: #000; }
+html:has(body.xp) { overflow: hidden; }
+body.xp { padding: 0; height: 100vh; height: 100dvh; overflow: hidden; }
+/* posé par xp.js quand le curseur image est prêt (sinon on garde le curseur normal) */
+html:has(body.xp.fake-cursor), body.xp.fake-cursor { --cursor: none; }
+.xp-cursor {
+  position: fixed; left: 0; top: 0; z-index: 200000; width: var(--xp-cursor); height: auto;
+  pointer-events: none; opacity: 0; transition: opacity .15s;
+}
+.xp-cursor.on { opacity: 1; }
+
+.xp-back {
+  position: fixed; top: var(--pad); left: var(--pad); z-index: 100000;
+  color: #fff; mix-blend-mode: difference; text-decoration: none;
+  font: 400 46px/1 var(--f-back), 'Junicode', serif;
+}
+.xp-tools {
+  position: fixed; top: calc(var(--pad) + 12px); right: var(--pad); z-index: 100000;
+  display: flex; align-items: center; gap: 16px;
+  color: #fff; mix-blend-mode: difference;
+}
+.xp-tools button {
+  padding: 0; border: 0; background: none; color: inherit;
+  font: 400 16px/1 var(--f-base), 'Junicode', serif; text-transform: uppercase;
+}
+.xp-tools #xp-restart { font: 400 28px/1 var(--f-back), 'Junicode', serif; }   /* la flèche qui tourne en rond */
+
+.xp-field { position: fixed; inset: 0; overflow: hidden; }
+/* l'image garde ses proportions ; seule sa taille est plafonnée pour tenir dans l'écran */
+.xp-img {
+  position: absolute; transform: translate(-50%, -50%);
+  max-width: 28vw; max-height: 45vh; width: auto; height: auto;
+  transition: filter .25s, left .9s cubic-bezier(.5, 0, .2, 1), top .9s cubic-bezier(.5, 0, .2, 1);   /* left / top : le déplacement du Mix */
+}
+.xp-img:hover { filter: invert(1) blur(4px); }
+.xp-img.fresh { pointer-events: none; }     /* l'image qu'on vient de poser sous la souris ne se floute qu'après un mouvement */
+
+
+/* ---------- 13. RESPONSIVE ---------- */
+@media (max-width: 700px) {
+  .grid { --cols: 1; grid-auto-rows: auto; }
+  .card { height: auto; aspect-ratio: 748.11 / 1057.94; }
+  .card.wide { grid-column: auto; aspect-ratio: 1510.93 / 1057.94; }
+  .card.text { aspect-ratio: auto; padding: 16px; font-size: 14px; }
+  .text .t-title { font-size: 24px; }
+  .text .t-meta { font-size: 11px; }
+
+  /* TÉLÉPHONE : le nom et les liens restent fixes en haut (barre noire) ;
+     les boutons À propos et XP passent en bas à droite, par-dessus le contenu (pas de fond). */
+  :root {
+    --m-pad: 12px;                                             /* marge haut / bas de la barre du haut */
+    --name-h: 33px;                                            /* hauteur de la ligne du nom (30px × 1.1) */
+    --nav-h: 20px;                                             /* hauteur de la ligne des liens */
+    --head-h: calc(var(--m-pad) * 2 + var(--name-h) + 6px + var(--nav-h));   /* hauteur de la barre du haut */
+  }
+  body { padding-top: calc(var(--head-h) + 12px); padding-bottom: calc(var(--about-h) + var(--pad) * 2); }
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 90; margin: 0;
+    display: flex; flex-direction: column;
+    padding: var(--m-pad) var(--pad); background: #000;
+  }
+  h1 { margin: 0 0 6px; }
+  nav { width: fit-content; height: var(--nav-h); align-items: center; gap: 18px; }
+
+  .about-btn { top: auto; bottom: var(--pad); }                 /* à droite comme sur ordinateur, mais en bas */
+  .xp-btn { top: auto; bottom: calc(var(--pad) + (var(--about-h) - var(--xp-h)) / 2); }   /* à gauche du bouton À propos */
+  .about-inner { padding: 24px 22px calc(var(--about-h) + var(--pad) * 2); }   /* le bouton est sur la feuille : on lui laisse la place en bas */
+  .about { width: 70vw; min-width: 0; }
+  .credits { padding: 9vh 6vw; }
+  :root { --xp-cursor: 40px; }
+  .credits-sheet { width: 100%; max-height: none; }
+}
