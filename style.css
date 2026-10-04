@@ -79,7 +79,7 @@
   --xp-cursor: 48px;                /* taille du curseur (bouton noir XP) sur la page XP */
 
   /* curseur = le chevron du favicon (pointe = point de clic) */
-  --cursor: url('source/site/cursor.png') 8 16, auto;
+  --cursor: url('source/site/favicon.png') 8 16, auto;
 
   /* polices d'interface : change simplement les noms ici */
   --f-base:    'Latitude';               /* texte par défaut */
